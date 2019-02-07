@@ -445,12 +445,7 @@ img {
     display: block;
   }
 
-.large-hero__image-effect {
-    margin: auto;
-    position: relative;
-  }
-
-.large-hero__image-effect {
+.large-hero__gradient-overlay {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100%);
     width:100%;
     height:100%;
@@ -458,34 +453,6 @@ img {
     top:0;
     left:0;
   }
-
-.hero-picture {
-  margin: auto;
-  position: relative;
-}
-
-.hero-image {
-  display: block;
-  /* visibility: hidden; */
-}
-
-/* .hero-image::after {
-  background: linear-gradient(to bottom rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100);
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-} */
-
-.gradient-overlay {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100%);
-  width:100%;
-  height:100%;
-  position:absolute;
-  top:0;
-  left:0;
-}
 
 .btn {
   background-color: #142436;
