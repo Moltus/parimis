@@ -441,20 +441,50 @@ img {
   }
   }
 
-.hero-image {
+.large-hero__image {
+    display: block;
+  }
+
+.large-hero__image-effect {
+    margin: auto;
+    position: relative;
+  }
+
+.large-hero__image-effect {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100%);
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+  }
+
+.hero-picture {
   margin: auto;
   position: relative;
 }
 
-.hero-image::after {
+.hero-image {
   display: block;
-  position: absolute;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0, #000 100%);
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  content: '';
+  /* visibility: hidden; */
+}
+
+/* .hero-image::after {
+  background: linear-gradient(to bottom rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100);
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
+} */
+
+.gradient-overlay {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) 100%);
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  left:0;
 }
 
 .btn {
