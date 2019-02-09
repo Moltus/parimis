@@ -6,14 +6,15 @@ var gulp = require('gulp'),
     mixins = require('postcss-mixins'),
     nested = require('postcss-nested'),
     cssImport = require('postcss-import'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    hexrgba = require('postcss-hexrgba');
 
 
 gulp.task('styles', styles);
 function styles() {
   console.log("Styles task ran");
   return gulp.src('./app/assets/styles/styles.css')
-    .pipe(postcss([cssImport, mixins, cssvars, nested, autoprefixer]))
+    .pipe(postcss([cssImport, mixins, cssvars, nested, hexrgba, autoprefixer]))
     .on('error', function(errorInfo) {
       console.log(errorInfo.toString());
       this.emit('end');
