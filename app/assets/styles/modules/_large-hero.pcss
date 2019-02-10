@@ -11,12 +11,19 @@
 
 
   &__text-content {
+    padding-top: 88px;
     position: absolute;
     top: 50%;
     transform: translatey(-50%);
     left: 0;
     width: 100%;
     text-align: center;
+    text-shadow: 0 0 10px black;
+    
+
+    @mixin atMedium {
+      padding-top: 60px;
+    }
   }
   
   &__title {
@@ -48,7 +55,7 @@
     color: #fff;
     font-size: 1.1rem;
     font-weight: 100;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, .1);
+    /* text-shadow: 2px 2px 0 rgba(0, 0, 0, .1); */
     max-width: 30rem;
     margin-left: auto;
     margin-right: auto;
