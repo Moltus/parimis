@@ -1,0 +1,42 @@
+.row {
+
+  &--t-padding {
+    padding-top: 80px;
+  }
+  &--cols-5-7 {
+
+    @mixin atMedium {
+      display: grid;
+      grid-template-columns: 5fr 7fr;
+      grid-gap: 65px;
+    }
+  }
+
+  &__b-margin-until-md {
+    margin-bottom: 1rem;
+
+    @mixin atMedium {
+      margin-bottom: 0;
+    }
+  }
+
+  &--cols-6-6 {
+
+    @mixin atMedium {
+      display: grid;
+      grid-template-columns: 6fr 6fr;
+      grid-gap: 65px;
+    }
+    
+  }
+
+  &--cols-4-4-4 {
+
+    @mixin atLarge {
+      display: grid;
+      grid-template-columns: 4fr 4fr 4fr;
+      grid-gap: 45px;
+    }
+  }
+  
+}

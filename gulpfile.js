@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync').create(),
     hexrgba = require('postcss-hexrgba');
 
-
+    
 gulp.task('styles', styles);
 function styles() {
   console.log("Styles task ran");
