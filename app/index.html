@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700' rel='stylesheet' type='text/css'>
   <title>Hotel Parimis</title>
   <meta name="keywords" content="Hotel resort, Luxury Hotel, hôtel luxe, Paris Hôtel">
@@ -16,14 +18,14 @@
   <header class="site-header">
     <div class="wrapper">
       <div class="site-header__logo">
-        <img src="assets/images/icons/logo-black.svg" alt="logo Parimis">
+        <img src="assets/images/svgs/logo-dkblue.svg" alt="logo Parimis">
       </div>
 
       <!-- <div class="site-header__menu-icon"></div> -->
 
       <div class="site-header__menu-content">
 
-        <nav class="primary-nav">
+        <nav class="primary-nav primary-nav--dkBlue">
           <ul>
             <li><a href="#">Features</a></li>
             <li><a href="#">Our Rooms</a></li>
@@ -43,17 +45,20 @@
           <a href="#" class="btn btn--gold">Reservations</a>
         </div>
       </div>
-  
+    </div>
   </header>
 
   <section class="large-hero">
     
     <picture>
       <source media="(min-width: 1280px)" 
-        srcset="assets/images/hero/hero-wide--lg.jpg 1280w">
+        srcset="assets/images/hero/hero-wide--lg.jpg 1280w"
+        sizes="100vw">
       <source media="(min-width: 640px)" 
-        srcset="assets/images/hero/hero-wide--md.jpg 1280w">
-      <img srcset="assets/images/hero/hero--sm.jpg 640w" alt="Roof top view of Paris at dawn." class="large-hero__image">
+        srcset="assets/images/hero/hero-wide--md.jpg 1280w"
+        sizes="100vw">
+      <img src="assets/images/hero/hero--sm.jpg" srcset="assets/images/hero/hero--sm.jpg 640w"
+        sizes="100vw" alt="Roof top view of Paris at dawn." class="large-hero__image">
     </picture>
     <div class="large-hero__gradient-overlay"></div>
     <div class="large-hero__text-content">
@@ -67,73 +72,95 @@
 
   <section class="page-section catchphrase">
     <div class="wrapper">
-      <img class="catchphrase__line-top" src="assets/images/svgs/top-gold.svg" alt="">
+      <img class="catchphrase__line-top" src="assets/images/svgs/illumination-top-gold.svg" alt="">
       <h2 class="catchphrase__title">Fresh, iconic, inspiring, original and utterly magnificent.</h2>
       <h3 class="catchphrase__subtitle">At Hotel Parimis, a unique and delightful experience awaits.</h3>
-      <img class="catchphrase__line-bottom" src="assets/images/svgs/bottom-gold.svg" alt="">
+      <img class="catchphrase__line-bottom" src="assets/images/svgs/illumination-bottom-gold.svg" alt="">
     </div>
   </section>
 
-  <section class="slider" id="slider">
+  <div class="slider" id="slider">
     <a class="slider__prev" id="prev-btn">&#10094;</a>
     <a class="slider__next" id="next-btn">&#10095;</a>
     <ul class="slider__slides" id="slides">
       <li class="slider__slide">
         <picture>
-          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS1_lg.jpg 1530w">
-          <source media="(min-width: 640px)" srcset="assets/images/slider/FS1_md.jpg 930w">
-          <img class="large-hero__image" srcset="assets/images/slider/FS1_sm.jpg 540w" alt="Cozy hotel terrace.">
+          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS1_lg.jpg 1530w"
+          sizes="100vw">
+          <source media="(min-width: 640px)" srcset="assets/images/slider/FS1_md.jpg 930w"
+          sizes="100vw">
+          <img class="large-hero__image" src="assets/images/slider/FS1_sm.jpg" srcset="assets/images/slider/FS1_sm.jpg 540w"
+          sizes="100vw" alt="Cozy hotel terrace.">
         </picture> 
       </li>
       <li class="slider__slide">
         <picture>
-          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS2_lg.jpg 1530w">
-          <source media="(min-width: 640px)" srcset="assets/images/slider/FS2_md.jpg 930w">
-          <img class="large-hero__image" srcset="assets/images/slider/FS2_sm.jpg 540w" alt="inside photo of Parimis hotel">
+          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS2_lg.jpg 1530w"
+          sizes="100vw">
+          <source media="(min-width: 640px)" srcset="assets/images/slider/FS2_md.jpg 930w"
+          sizes="100vw">
+          <img class="large-hero__image" src="assets/images/slider/FS2_sm.jpg" srcset="assets/images/slider/FS2_sm.jpg 540w"
+          sizes="100vw" alt="inside photo of Parimis hotel">
         </picture>
       </li>
       <li class="slider__slide">
         <picture>
-          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS3_lg.jpg 1530w">
-          <source media="(min-width: 640px)" srcset="assets/images/slider/FS3_md.jpg 930w">
-          <img class="large-hero__image" srcset="assets/images/slider/FS3_sm.jpg 540w" alt="inside photo of Parimis hotel">
+          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS3_lg.jpg 1530w"
+          sizes="100vw">
+          <source media="(min-width: 640px)" srcset="assets/images/slider/FS3_md.jpg 930w"
+          sizes="100vw">
+          <img class="large-hero__image" src="assets/images/slider/FS3_sm.jpg" srcset="assets/images/slider/FS3_sm.jpg 540w"
+          sizes="100vw" alt="inside photo of Parimis hotel">
         </picture>
       </li>
       <li class="slider__slide">
         <picture>
-          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS4_lg.jpg 1530w">
-          <source media="(min-width: 640px)" srcset="assets/images/slider/FS4_md.jpg 930w">
-          <img class="large-hero__image" srcset="assets/images/slider/FS4_sm.jpg 540w" alt="inside photo of Parimis hotel">
+          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS4_lg.jpg 1530w"
+          sizes="100vw">
+          <source media="(min-width: 640px)" srcset="assets/images/slider/FS4_md.jpg 930w"
+          sizes="100vw">
+          <img class="large-hero__image" src="assets/images/slider/FS4_sm.jpg" srcset="assets/images/slider/FS4_sm.jpg 540w"
+          sizes="100vw" alt="inside photo of Parimis hotel">
         </picture>
       </li>
       <li class="slider__slide">
         <picture>
-          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS5_lg.jpg 1530w">
-          <source media="(min-width: 640px)" srcset="assets/images/slider/FS5_md.jpg 930w">
-          <img class="large-hero__image" srcset="assets/images/slider/FS5_sm.jpg 540w" alt="inside photo of Parimis hotel">
+          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS5_lg.jpg 1530w"
+          sizes="100vw">
+          <source media="(min-width: 640px)" srcset="assets/images/slider/FS5_md.jpg 930w"
+          sizes="100vw">
+          <img class="large-hero__image" src="assets/images/slider/FS5_sm.jpg" srcset="assets/images/slider/FS5_sm.jpg 540w"
+          sizes="100vw" alt="inside photo of Parimis hotel">
         </picture>
       </li>
       <li class="slider__slide">
         <picture>
-          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS6_lg.jpg 1530w">
-          <source media="(min-width: 640px)" srcset="assets/images/slider/FS6_md.jpg 930w">
-          <img class="large-hero__image" srcset="assets/images/slider/FS6_sm.jpg 540w" alt="inside photo of Parimis hotel">
+          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS6_lg.jpg 1530w"
+          sizes="100vw">
+          <source media="(min-width: 640px)" srcset="assets/images/slider/FS6_md.jpg 930w"
+          sizes="100vw">
+          <img class="large-hero__image" src="assets/images/slider/FS6_sm.jpg"
+          srcset="assets/images/slider/FS6_sm.jpg 540w"
+          sizes="100vw" alt="inside photo of Parimis hotel">
         </picture>
       </li>
       <li class="slider__slide">
         <picture>
-          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS1_lg.jpg 1530w">
-          <source media="(min-width: 640px)" srcset="assets/images/slider/FS1_md.jpg 930w">
-          <img class="large-hero__image" srcset="assets/images/slider/FS1_sm.jpg 540w" alt="Cozy hotel terrace.">
+          <source media="(min-width: 1280px)" srcset="assets/images/slider/FS1_lg.jpg 1530w"
+          sizes="100vw">
+          <source media="(min-width: 640px)" srcset="assets/images/slider/FS1_md.jpg 930w"
+          sizes="100vw">
+          <img class="large-hero__image" src="assets/images/slider/FS1_sm.jpg" srcset="assets/images/slider/FS1_sm.jpg 540w"
+          sizes="100vw" alt="Cozy hotel terrace.">
         </picture>
       </li>
     </ul>
-  </section>
+  </div>
 
 
 
 
-  <section class="accomodations page-section">
+  <section class="accomodations page-section page-section--no-padding">
     <div class="wrapper">
       <h2 class="headline headline--centered headline--light headline--b-margin-sm headline__title">
         Accomodations</h2>
@@ -143,16 +170,20 @@
     </div>
       <picture>
         <source media="(min-width: 1280px)" 
-          srcset="assets/images/features/home-room1--lg.jpg 1280w">
+          srcset="assets/images/features/home-room1--lg.jpg 1280w"
+          sizes="100vw">
         <source media="(min-width: 640px)" 
-          srcset="assets/images/features/home-room1--md.jpg 1280w">
+          srcset="assets/images/features/home-room1--md.jpg 1280w"
+          sizes="100vw">
         <img class="page-section__image" src="assets/images/features/home-room1--sm.jpg" alt="Cosy room with wood furniture.">
       </picture>
       <picture>
         <source media="(min-width: 1280px)" 
-          srcset="assets/images/features/home-room2--lg.jpg 1280w">
+          srcset="assets/images/features/home-room2--lg.jpg 1280w"
+          sizes="100vw">
         <source media="(min-width: 640px)" 
-          srcset="assets/images/features/home-room2--md.jpg 1280w">
+          srcset="assets/images/features/home-room2--md.jpg 1280w"
+          sizes="100vw">
         <img class="page-section__image" src="assets/images/features/home-room2--sm.jpg" alt="Oils on bed by daylight">
       </picture>
   </section>
@@ -163,7 +194,7 @@
       <h3 class="headline headline--centered headline--white headline--small 
             headline--narrow headline--b-margin-lg">
         In the legendary <strong>city of light</strong></h3>
-      <div class="page-section--flex">
+      <div class="page-section--flex generic-content-container generic-content-container--big-first">
         <p>As you arrive at <strong>Parimis Hotel, Paris</strong>, its elegant façade brings to mind its legacy as the former home of Napoleon
           Bonaparte’s grandnephew, Prince Roland Bonaparte. <em>Attentive staff</em> and a pleasantly discreet check-in ensure that you
           receive the <strong>royal treatment</strong> right from the start.</p>
@@ -184,7 +215,7 @@
     <div class="wrapper">
       <div class="site-footer__menu-content">
         <p>Copyright &copy; 2019 Parimis All rights reserved. <a href="#" class="btn btn--gold">Get in Touch</a></p>
-        <nav class="primary-nav primary-nav--white">
+        <nav class="primary-nav primary-nav--dkGold">
           <ul>
             <li><a href="#">Legal notice</a></li>
             <li><a href="#">Terms of sale</a></li>

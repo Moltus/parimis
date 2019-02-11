@@ -369,6 +369,14 @@ a {
   color: #AF804E;
 }
 
+::-moz-selection {
+  background: #E5B67C;
+}
+
+::selection {
+  background: #E5B67C;
+}
+
 @font-face {
   font-family: 'parisienneregular';
   src: url('../../assets/fonts/parisienne-regular-webfont.woff2') format('woff2'),
@@ -415,7 +423,7 @@ a {
     font-family: 'parisienneregular', 'Segoe UI', sans-serif;
     
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 3rem;
   }
 
 @media (min-width: 540px) {
@@ -582,6 +590,10 @@ a {
 }
   }
 
+.page-section--no-padding {
+    padding: 0;
+  }
+
 @media (min-width: 540px) {
   }
 
@@ -738,6 +750,11 @@ a {
   }
   }
 
+.generic-content-container--big-first p::first-letter {
+    font-size: 2em;
+    line-height: 1em;
+    }
+
 .generic-content-container p a {
     font-weight: 700;
     text-decoration: none;
@@ -883,6 +900,10 @@ a {
   justify-content: space-around;
 }
 
+.site-footer--gold {
+     color: #E5B67C;
+  }
+
 .site-footer__text {
     display: block;
     margin-bottom: 1rem;
@@ -982,17 +1003,20 @@ a {
   }
   }
 
-.primary-nav {
-  color: #000;
+.primary-nav--dkGold a {
+      color: #AF804E;
+    }
 
-
-}
+.primary-nav--dkBlue a {
+      color: #142436;
+    }
 
 .primary-nav ul {
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: 12px 0;
+
   }
 
 .primary-nav li {
@@ -1001,17 +1025,12 @@ a {
   }
 
 .primary-nav a {
-    
     text-decoration: none;
     font-weight: 400;
   }
 
 .primary-nav ul ul {
     display: none;
-  }
-
-.primary-nav--white {
-    color: white;
   }
 
 .slider {
