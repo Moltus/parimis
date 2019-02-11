@@ -1,14 +1,12 @@
 .slider {
-  width: 1530px;
-  /* height: 400px; */
   position: relative;
-  height: auto;
+  /* height: auto; */
   overflow: hidden;
   margin: 0 auto;
 
   &__slides {
-    display: block;
-    width: 16000px;
+    display: flex;
+    width: calc(100vw*7);
     /* height: 400px; */
     height: auto;
     margin: 0;
@@ -16,17 +14,21 @@
   }
 
   &__slide {
-    float: left;
     list-style-type: none;
-    width: 1530px;
-    /* height: 400px; */
+    width: 100%;
+    /* height: 100%; */
     height: auto;
   }
+
+  &__slide img {
+    width: 100vw;
+  }
+  
 
   &__prev, &__next {
   cursor: pointer;
   position: absolute;
-  top: 430px;
+  top: 50%;
   width: auto;
   padding: 16px;
   margin-top: -22px;

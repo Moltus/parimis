@@ -16,4 +16,5 @@
 @import "modules/_site-footer.pcss";
 @import "modules/_site-header.pcss";
 @import "modules/_primary-nav.pcss";
-@import "modules/_slider.pcss"
+@import "modules/_slider.pcss";
+@import "modules/_catchphrase.pcss";
