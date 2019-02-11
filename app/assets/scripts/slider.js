@@ -5,6 +5,7 @@ $(function() {
   //configuration
 
   let width = window.innerWidth;
+  // let width = 1630
   let animationSpeed = 1000;
   let pause = 4000;
   let currentSlide = 1;

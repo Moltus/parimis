@@ -6,6 +6,18 @@
     padding: 4.5rem 0;
   }
 
+  &--flex {  
+
+    @mixin atSmall {
+    }
+
+    @mixin atMedium {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 50px;
+      }
+  }
+
   &--teal {
     background-color: $teal;
     color: #111;

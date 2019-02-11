@@ -582,6 +582,18 @@ a {
 }
   }
 
+@media (min-width: 540px) {
+  }
+
+@media (min-width: 800px) {
+
+.page-section--flex {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 50px
+  }
+  }
+
 .page-section--teal {
     background-color: #69A19C;
     color: #111;
@@ -853,7 +865,7 @@ a {
 }
 
 .site-footer__text {
-    /* display: block; */
+    display: block;
     margin-bottom: 1rem;
     font-weight: 200;
   }
@@ -970,13 +982,16 @@ a {
   /* height: auto; */
   overflow: hidden;
   margin: 0 auto;
+  width: 100%;
+  height: 100%;
 }
 
 .slider__slides {
     display: flex;
     width: calc(100vw*7);
+    height: 100%;
     /* height: 400px; */
-    height: auto;
+    /* height: auto; */
     margin: 0;
     padding: 0;
   }
@@ -985,11 +1000,12 @@ a {
     list-style-type: none;
     width: 100%;
     /* height: 100%; */
-    height: auto;
+    height: 100%;
   }
 
 .slider__slide img {
-    width: 100vw;
+    width: 100%;
+    height: 100%;
   }
 
 .slider__prev, .slider__next {
