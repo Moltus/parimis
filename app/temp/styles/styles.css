@@ -623,7 +623,22 @@ a {
 
 .headline__title {
     font-family: 'parisienneregular', 'Segoe UI', sans-serif;
-    font-size: 5rem;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+@media (min-width: 540px) {
+
+.headline__title {
+      font-size: 4rem
+  }
+  }
+
+@media (min-width: 800px) {
+
+.headline__title {
+      font-size: 5rem
+  }
   }
 
 .headline--centered {
@@ -1061,11 +1076,15 @@ a {
 
 .catchphrase__title { 
     font-size: 2rem;
+      font-weight: 200;
+
   }
 
 .catchphrase__subtitle {
      font-size: 2rem;
      margin-top: 0;
+     font-weight: 200;
+
      /* margin-left: 100px; */
   }
 
