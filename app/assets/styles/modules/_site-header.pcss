@@ -12,10 +12,14 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%) scale(.35);
+    transform: translateX(-50%) scale(.5);
     transform-origin: top;
     padding: 10px 50px;
     background-color: rgba(#fff, .5); 
+
+    @mixin atSmall {
+      transform: translateX(-50%) scale(.35);
+    }
     
     @mixin atMedium {
       position: absolute;

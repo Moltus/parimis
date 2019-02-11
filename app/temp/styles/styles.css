@@ -920,12 +920,20 @@ a {
     position: absolute;
     top: 0;
     left: 50%;
-    -webkit-transform: translateX(-50%) scale(.35);
-            transform: translateX(-50%) scale(.35);
+    -webkit-transform: translateX(-50%) scale(.5);
+            transform: translateX(-50%) scale(.5);
     -webkit-transform-origin: top;
             transform-origin: top;
     padding: 10px 50px;
     background-color: rgba(255,255,255, .5);
+  }
+
+@media (min-width: 540px) {
+
+.site-header__logo {
+      -webkit-transform: translateX(-50%) scale(.35);
+              transform: translateX(-50%) scale(.35)
+  }
   }
 
 @media (min-width: 800px) {
