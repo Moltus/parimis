@@ -6,7 +6,7 @@ $(function() {
 
   let width = window.innerWidth;
   // let width = 1630
-  let animationSpeed = 1000;
+  let animationSpeed = 750;
   let pause = 4000;
   let currentSlide = 1;
 
@@ -29,23 +29,27 @@ $(function() {
       currentSlide = 1;
       $slideContainer.css('margin-left', 0);
     }
-    $slideContainer.animate({ 'margin-left': '-=' + width }, animationSpeed)
+    $slideContainer.animate({ 'margin-left': '-=' + width }, animationSpeed, "swing");
+    $slider.fadeTo(250, 0.5).fadeTo(500, 1);
   }
   
   function feedPrevious() {
     if (currentSlide !== 1) {
       currentSlide--;
-      $slideContainer.animate({ 'margin-left': '+=' + width }, animationSpeed);
+      $slideContainer.animate({ 'margin-left': '+=' + width }, animationSpeed, );
+      $slider.fadeTo(250, 0.5).fadeTo(500, 1);
     }
   }
  
   function startSlider() {
     interval = setInterval(function () {
+      $slider.fadeTo(250, 0.5).fadeTo(500, 1);
       $slideContainer.animate({ 'margin-left': '-=' + width }, animationSpeed, function() {
         currentSlide++;
         if (currentSlide === $slides.length) {
           currentSlide = 1;
           $slideContainer.css('margin-left', 0);
+          
         }
       });
     }, pause);
