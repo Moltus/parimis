@@ -862,6 +862,10 @@ a {
   color: #fff;
   padding: .5rem 0;
   text-align: center;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .site-footer__text {
@@ -955,6 +959,12 @@ a {
   }
   }
 
+.primary-nav {
+  color: #000;
+
+
+}
+
 .primary-nav ul {
     display: flex;
     flex-direction: row;
@@ -968,13 +978,17 @@ a {
   }
 
 .primary-nav a {
-    color: #000;
+    
     text-decoration: none;
     font-weight: 400;
   }
 
 .primary-nav ul ul {
     display: none;
+  }
+
+.primary-nav--white {
+    color: white;
   }
 
 .slider {
