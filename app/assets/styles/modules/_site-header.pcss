@@ -27,8 +27,8 @@
     }
   }
 
-  &__logo { 
-    
+  &__logo {   
+    width: 120px;
     svg {
       width: 60px;
       fill: $dkBlue;
@@ -72,6 +72,17 @@
 
     @mixin atMedium {
       display: none;
+    }
+  }
+
+  &__secondary-menu {
+
+    @mixin atSmall {
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(255, 255, 255, .5) 25%, rgba(255, 255, 255, .5) 100%);
+    }
+
+    @mixin atMedium {
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 32%, rgba(255, 255, 255, .5) 32%, rgba(255, 255, 255, .5) 100%);
     }
   }
 

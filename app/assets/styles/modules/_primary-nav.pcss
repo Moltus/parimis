@@ -36,13 +36,36 @@
     }
   }
 
+  &__spacer {
+    position: relative;
+    height: 40px;
+  }
+
   &__dropdown ul {
     display: none;
   }
 
   &__dropdown:hover ul {
-    display: block;
-    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    /* top: 65px; */
+    /* transform: translateY(15px); */
+
+    /* & ul:hover {
+      display: block;
+      
+    } */
+    & li {
+      padding: 25px 20px 3px 0;
+      display: inline-block;
+
+      @mixin atMedium {
+        padding: 25px 20px 3px 0;
+      }
+    }
+    /* align-self: flex-end; */
   }
 
   &__arrow-down {
