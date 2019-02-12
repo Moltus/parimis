@@ -358,6 +358,7 @@ html {
 body {
   font-family: 'Roboto', sans-serif;
   color: #333;
+  --headerOpacity: .5
 }
 
 img {
@@ -935,7 +936,7 @@ a {
   position: fixed;
   z-index: 3;
   width: 100%;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, var(--headerOpacity));
   /* background-color: #fff; */
   border-bottom: 1px solid #142436;
 
@@ -969,8 +970,18 @@ a {
   }
   }
 
-.site-header__logo {   
-    width: 120px;
+@media (min-width: 540px) {
+
+.site-header__logo {
+      width: initial
+  }
+  }
+
+@media (min-width: 800px) {
+
+.site-header__logo {
+      width: 120px
+  }
   }
 
 .site-header__logo svg {
@@ -1036,14 +1047,14 @@ a {
 @media (min-width: 540px) {
 
 .site-header__secondary-menu {
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(255, 255, 255, .5) 25%, rgba(255, 255, 255, .5) 100%)
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(255, 255, 255, var(--headerOpacity)) 25%, rgba(255, 255, 255, var(--headerOpacity)) 100%)
   }
   }
 
 @media (min-width: 800px) {
 
 .site-header__secondary-menu {
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 32%, rgba(255, 255, 255, .5) 32%, rgba(255, 255, 255, .5) 100%)
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 32%, rgba(255, 255, 255, var(--headerOpacity)) 32%, rgba(255, 255, 255, var(--headerOpacity)) 100%)
   }
   }
 
