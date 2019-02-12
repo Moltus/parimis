@@ -1,29 +1,51 @@
 .site-header {
-  position: absolute;
-  z-index: 2;
+  position: fixed;
+  z-index: 3;
   width: 100%;
-  
+  background-color: rgba(255, 255, 255, .5);
+  /* background-color: #fff; */
+  border-bottom: 1px solid $dkBlue;
+  /* padding-bottom: 40px; */
 
   @mixin atMedium {
-    background-color: rgba(#fff, .5); 
   }
 
-  &__logo {
-    padding: 10px 10px;
-
+  &__flex-container {
+    /* display: none; */
+    padding: 5px 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+ 
     @mixin atSmall {
+      flex-direction: column;
     }
-    
+
     @mixin atMedium {
-      padding: 0;
-      background-color: transparent;
-    }
-    img {
-      width: 60px;
+      flex-direction: row;
     }
   }
+
+  &__logo { 
+    
+    svg {
+      width: 60px;
+      fill: $dkBlue;
+      transition: fill .5s;
+
+      &:hover {
+        fill: $dkGold;             
+      }
+    }
+  }
+
   &__menu-content {
     display: none;
+
+    @mixin atSmall {
+      display: block;
+    }
 
     @mixin atMedium {
       display: block;
@@ -32,6 +54,9 @@
 
   &__btn-container {
     display: none;
+
+    @mixin atSmall {
+    }
   
     @mixin atMedium {
       display: block;
@@ -39,32 +64,16 @@
   }
 
   &__menu-icon {
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    display: block;
+
+    @mixin atSmall {
+      display: block;
+    }
 
     @mixin atMedium {
       display: none;
     }
   }
-
-  &__flex-container {
-    /* display: none; */
-    padding: 0;
-    
-    @mixin atMedium {
-      padding: 5px 18px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-
-    }
-  }
-
 
 }
 
