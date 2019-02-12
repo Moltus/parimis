@@ -11,9 +11,9 @@ $(function() {
   let currentSlide = 1;
 
   //cache DOM
-  let $slider = $('#slider');
-  let $slideContainer = $('#slides');
-  let $slides = $slideContainer.find('.slider__slide');
+  let slider = $('#slider');
+  let slideContainer = $('#slides');
+  let slides = slideContainer.find('.slider__slide');
   let $prev = $('#prev-btn');
   let $next = $('#next-btn');
 
@@ -25,30 +25,30 @@ $(function() {
   
   function feedNext() {
     currentSlide++;
-    if (currentSlide === $slides.length) {
+    if (currentSlide === slides.length) {
       currentSlide = 1;
-      $slideContainer.css('margin-left', 0);
+      slideContainer.css('margin-left', 0);
     }
-    $slideContainer.animate({ 'margin-left': '-=' + width }, animationSpeed, "swing");
-    $slider.fadeTo(350, 0.5).fadeTo(350, 1);
+    slideContainer.animate({ 'margin-left': '-=' + width }, animationSpeed, "swing");
+    slider.fadeTo(350, 0.5).fadeTo(350, 1);
   }
   
   function feedPrevious() {
     if (currentSlide !== 1) {
       currentSlide--;
-      $slideContainer.animate({ 'margin-left': '+=' + width }, animationSpeed, );
-      $slider.fadeTo(350, 0.5).fadeTo(350, 1);
+      slideContainer.animate({ 'margin-left': '+=' + width }, animationSpeed, );
+      slider.fadeTo(350, 0.5).fadeTo(350, 1);
     }
   }
  
   function startSlider() {
     interval = setInterval(function () {
-      $slider.fadeTo(500, 0.5).fadeTo(500, 1);
-      $slideContainer.animate({ 'margin-left': '-=' + width }, 1000, function() {
+      slider.fadeTo(500, 0.5).fadeTo(500, 1);
+      slideContainer.animate({ 'margin-left': '-=' + width }, 1000, function() {
         currentSlide++;
-        if (currentSlide === $slides.length) {
+        if (currentSlide === slides.length) {
           currentSlide = 1;
-          $slideContainer.css('margin-left', 0);
+          slideContainer.css('margin-left', 0);
           
         }
       });
@@ -72,7 +72,7 @@ $(function() {
   //listen to mousenter and pause
   //resume on mouseleave
 
-  // $slider.on('mouseenter', stopSlider).on('mouseleave', startSlider);
+  // slider.on('mouseenter', stopSlider).on('mouseleave', startSlider);
 
   //on click for previous and next arrow buttons
   //slide left or right

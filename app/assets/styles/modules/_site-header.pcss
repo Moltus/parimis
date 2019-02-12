@@ -3,15 +3,12 @@
   z-index: 3;
   width: 100%;
   background-color: rgba(255, 255, 255, var(--headerOpacity));
-  /* background-color: #fff; */
   border-bottom: 1px solid $dkBlue;
-  /* padding-bottom: 40px; */
 
   @mixin atMedium {
   }
 
-  &__flex-container {
-    /* display: none; */
+  &__main-nav-container {
     padding: 5px 18px;
     display: flex;
     flex-direction: row;
@@ -46,15 +43,70 @@
     }
   }
 
+  &__burger-icon {
+    cursor: pointer;
+    & div {
+      width: 30px;
+      height: 3px;
+      background-color: black;
+      margin: 6px 0;
+    }
+
+    @mixin atSmall {
+      display: none;
+    }
+  }
+
   &__menu-content {
     display: none;
 
+    &--is-visible {
+      display: block;
+      position: absolute;
+      top: 65px;
+
+      & ul {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
     @mixin atSmall {
       display: block;
+
+      & ul {
+        display: flex;
+        flex-direction: row;
+        }
     }
 
     @mixin atMedium {
       display: block;
+
+      & ul {
+        display: flex;
+        flex-direction: row;
+        }
+    }
+
+    &__dropdown {
+      cursor: pointer;
+    }
+
+    &__dropdown:hover ul {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      left: 0;
+
+      & li {
+      padding: 25px 20px 3px 0;
+      display: inline-block;
+
+        @mixin atMedium {
+          padding: 25px 20px 3px 0;
+        }
+      }
     }
   }
 
@@ -84,11 +136,11 @@
   &__secondary-menu {
     
     @mixin atSmall {
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(255, 255, 255, var(--headerOpacity)) 25%, rgba(255, 255, 255, var(--headerOpacity)) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 27%, rgba(255, 255, 255, var(--headerOpacity)) 27%, rgba(255, 255, 255, var(--headerOpacity)) 100%);
     }
 
     @mixin atMedium {
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 32%, rgba(255, 255, 255, var(--headerOpacity)) 32%, rgba(255, 255, 255, var(--headerOpacity)) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0) 34%, rgba(255, 255, 255, var(--headerOpacity)) 34%, rgba(255, 255, 255, var(--headerOpacity)) 100%);
     }
   }
 
