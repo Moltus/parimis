@@ -1,16 +1,5 @@
 .primary-nav {
   
-  &--dkGold {
-    a {
-      color: $dkGold;
-    }
-  }
-  &--dkBlue {
-    a {
-      color: $dkBlue;
-    }
-  }
-
   ul {
     display: flex;
     flex-direction: row;
@@ -27,6 +16,36 @@
   a {
     text-decoration: none;
     font-weight: 400;
+    display: inline-block;
+  }
+
+  &--dkGold {
+    a {
+      color: $dkGold;
+    }
+    a:after {
+      border-bottom: 2px solid $dkGold;
+    }
+  }
+  &--dkBlue {
+    a {
+      color: $dkBlue;
+    }
+    a:after {
+      border-bottom: 2px solid $dkBlue;
+    }
+  }
+
+  a:after {
+    display: block;
+    content: '';
+    /* border-bottom: 2px solid $dkBlue; */
+    transform: scaleX(0);
+    transition: transform 250ms;
+  }
+
+  a:hover:after {
+    transform: scaleX(1);
   }
 
   ul ul {
