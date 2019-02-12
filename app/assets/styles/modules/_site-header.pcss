@@ -2,35 +2,39 @@
   position: absolute;
   z-index: 2;
   width: 100%;
-  padding: 12px 0;
+  
 
   @mixin atMedium {
     background-color: rgba(#fff, .5); 
   }
 
   &__logo {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) scale(.5);
-    transform-origin: top;
-    padding: 10px 50px;
-    background-color: rgba(#fff, .5); 
+    padding: 10px 10px;
 
     @mixin atSmall {
-      transform: translateX(-50%) scale(.35);
     }
     
     @mixin atMedium {
-      position: absolute;
-      padding-top: 20px;
+      padding: 0;
       background-color: transparent;
-      left: 0;
-      transform: translateX(0) scale(.35);
     }
-
     img {
-      width: 180px;
+      width: 60px;
+    }
+  }
+  &__menu-content {
+    display: none;
+
+    @mixin atMedium {
+      display: block;
+    }
+  }
+
+  &__btn-container {
+    display: none;
+  
+    @mixin atMedium {
+      display: block;
     }
   }
 
@@ -47,14 +51,17 @@
     }
   }
 
-  &__menu-content {
-    display: none;
-
+  &__flex-container {
+    /* display: none; */
+    padding: 0;
+    
     @mixin atMedium {
+      padding: 5px 18px;
       display: flex;
       flex-direction: row;
-      justify-content: flex-end;
-      /* align-items: center; */
+      justify-content: space-between;
+      align-items: center;
+
     }
   }
 
