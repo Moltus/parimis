@@ -11,7 +11,7 @@ $(document).ready(function () {
   function toggleOrange() {
     if (menuContent.hasClass(classMenuVisible)) {
       $("#site-header").css("background-color",
-        "rgba(229, 182, 124)")
+        "rgb(229, 182, 124)");
     } else if (!menuContent.hasClass(classMenuVisible)) {
       $("#site-header").css("background-color", "rgba(255, 255, 255, var(--headerOpacity))")
     }
@@ -25,10 +25,9 @@ $(document).ready(function () {
     } else {
       menuContent.toggleClass(classMenuVisible);
       toggleOrange();
-      
-    }
-    
+    }    
   });
+
   dropDown.click(function(){
     if (windowWidth < 600) {
     console.log("clicked on dropdown");
