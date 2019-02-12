@@ -7,5 +7,6 @@ $(document).ready(function () {
       $("body").get(0).style.setProperty("--headerOpacity", opacity);
     }
   });
+  
 });
 
