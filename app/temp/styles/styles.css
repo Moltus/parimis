@@ -1309,8 +1309,12 @@ a {
     height: 100%;
     margin: 0;
     padding: 0;
-
   }
+
+.slider__slides--pics5 {
+      width: calc(100vw*5);
+      height: 100%;
+    }
 
 .slider__slide {
     list-style-type: none;
