@@ -7,5 +7,6 @@ dropDown.hover(function () {
   if (windowWidth > 600) {
   console.log("secondary menu activate!");
   secondaryMenu.toggleClass(classDropdownVisible);
+  // secondaryMenu.slideDown(1000);
   }
 });

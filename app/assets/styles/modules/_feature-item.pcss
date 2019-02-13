@@ -9,9 +9,14 @@
     padding-left: 94px;  
   }
 
+  &--white {
+    color: white;
+  }
+
   &__icon {
     display: block;
-    margin: 0 auto;
+    width: 50px;
+    margin: 0 auto; 
 
     @mixin atSmall {
       position: absolute;
@@ -25,6 +30,11 @@
     margin-top: .7em;
     margin-bottom: .8rem;
     text-align: center;
+
+    &__icon {
+      width: 50px;
+      left: 100px;
+    }
 
     @mixin atSmall {
       text-align: left;

@@ -1,12 +1,17 @@
 .site-footer {
   background-color: $dkBlue;
   color: #fff;
-  padding: .5rem 0;
+  padding: 1.5rem 0;
   text-align: center;
   padding-bottom: 40px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  &__links {
+    display: flex;
+    margin-bottom: 2rem;
+  }
 
   &--gold {
      color: $ltGold;
@@ -17,9 +22,14 @@
     margin-bottom: 1rem;
     font-weight: 200;
 
+    @mixin atSmall {
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
+
     @mixin atMedium {
-      display: inline;
-      margin-bottom: 0;
+      display: inline-block;
+      margin-bottom: 2rem;
       margin-right: 1.4rem;
     }
   }
