@@ -25,6 +25,7 @@ class Modal {
   }
 
   openModal() {
+    console.log("open modal youhou!")
     this.modal.addClass(this.visibilityClass);
     return false;
   }
@@ -37,4 +38,8 @@ class Modal {
 var modalContact = new Modal("contact");
 var modalNewsletter = new Modal("newsletter");
 var modalReservations = new Modal("reservations");
+var modalRecruiting = new Modal("recruiting");
+var modalLegalnotice = new Modal("legalnotice");
+var modalTermsofsale = new Modal("termsofsale");
+
 

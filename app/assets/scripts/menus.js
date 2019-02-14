@@ -5,8 +5,18 @@ $(document).ready(function () {
   let dropDown = $(".site-header__menu-content__dropdown");
   let secondaryMenu = $(".site-header__secondary-menu");
   let classDropdownVisible = "site-header__secondary-menu--is-visible";
+
   let windowWidth = $(window).width();
+
+  // dropdown hover function for desktop view
   
+  dropDown.hover(function () {
+    if (windowWidth > 600) {
+      secondaryMenu.toggleClass(classDropdownVisible);
+    }
+  })
+
+  // burger menu functions for mobile view
 
   function toggleOrange() {
     if (menuContent.hasClass(classMenuVisible)) {
@@ -30,7 +40,6 @@ $(document).ready(function () {
 
   dropDown.click(function(){
     if (windowWidth < 600) {
-    console.log("clicked on dropdown");
     secondaryMenu.toggleClass(classDropdownVisible)
     }
   });

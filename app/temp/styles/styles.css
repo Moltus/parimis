@@ -701,6 +701,10 @@ a {
     color: #E5B67C;
   }
 
+.headline--teal {
+    color: teal;
+  }
+
 .headline--white {
     color: #fff;
   }
@@ -903,8 +907,8 @@ a {
   }
 
 .testimonial {
-  background-color: rgba(255, 255, 255, .8);
-  padding: 0 18px 0 18px;
+  background-color: #142436;
+  padding: 0 18px 8px 18px;
   margin-bottom: 98px;
 }
 
@@ -926,11 +930,11 @@ a {
     margin: 0 auto -80px auto;
     position: relative;
     top: -80px;
-    border: 6px solid rgba(255, 255, 255, .8);
+    border: 6px solid #142436;
   }
 
 .testimonial__title {
-    color: #142436;
+    color: #AF804E;
     text-align: center;
     font-size: 1.5rem;
     font-weight: 500;
@@ -938,11 +942,15 @@ a {
   }
 
 .testimonial__subtitle {
-    color: #AF804E;
+    color: #E5B67C;
     text-align: center;
     font-weight: 400;
     font-size: 0.9375rem;
     margin: .25rem 0 1rem 0; 
+  }
+
+.testimonial--whitetext {
+    color: #ddd;
   }
 
 .site-footer {
@@ -1372,10 +1380,11 @@ a {
 .catchphrase {
   font-family: 'parisienneregular', 'Segoe UI', sans-serif;
   text-align: center;
+  overflow: hidden;
 }
 
 .catchphrase__title { 
-    font-size: 2rem;
+    font-size: 3rem;
       font-weight: 200;
 
   }
@@ -1478,6 +1487,42 @@ a {
   }
 
 .modal__reservations--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+
+.modal__recruiting {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+.modal__recruiting--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+
+.modal__termsofsale {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+.modal__termsofsale--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+
+.modal__legalnotice {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+.modal__legalnotice--is-visible {
     opacity: 1;
     visibility: visible;
     -webkit-transform: scale(1);
