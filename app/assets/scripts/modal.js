@@ -1,7 +1,8 @@
 class Modal {
   constructor(button) {
     this.openModalButton = $(".open-modal-" + button);
-    this.modal = $(".modal");
+    this.modal = $(".modal__" + button);
+    this.visibilityClass = "modal__" + button + "--is-visible";
     this.closeModalButton = $(".modal__close");
     this.events();
   }
@@ -24,35 +25,15 @@ class Modal {
   }
 
   openModal() {
-    this.modal.addClass("modal--is-visible");
+    this.modal.addClass(this.visibilityClass);
     return false;
   }
 
   closeModal() {
-    this.modal.removeClass("modal--is-visible");
+    this.modal.removeClass(this.visibilityClass);
   }
 }
 
 var modalContact = new Modal("contact");
+var modalNewsletter = new Modal("newsletter");
 
-
-
-
-
-// const openContactButton = $(".open-contact");
-// const modal = $(".modal");
-// const closeModalButton = $(".modal__close");
-
-// function events() {
-//   // clicking the open modal button
-
-//   // clicking the x close modal button
-// };
-
-// function openModal() {
-
-// };
-
-// function closeModal() {
-
-// };
