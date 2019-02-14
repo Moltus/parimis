@@ -1472,6 +1472,18 @@ a {
             transform: scale(1);
     }
 
+.modal__reservations {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+.modal__reservations--is-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+
 .social-icons {
   text-align: center;
 }
@@ -1500,7 +1512,7 @@ a {
   margin: 0 auto;
 }
 
-.form-container input[type=text], .form-container select {
+.form-container input[type=text], .form-container input[type=email], .form-container input[type=date], .form-container select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

@@ -36,4 +36,5 @@ class Modal {
 
 var modalContact = new Modal("contact");
 var modalNewsletter = new Modal("newsletter");
+var modalReservations = new Modal("reservations");
 
