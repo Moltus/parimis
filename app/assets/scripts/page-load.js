@@ -1,7 +1,7 @@
 (function(){
-  $("#site-header").load("/pages/header.html");
-  $("#site-footer").load("/pages/footer.html");
-  $("#modals").load("/pages/modals.html");
+  $("#site-header").load("/pages/load-header.html");
+  $("#site-footer").load("/pages/load-footer.html");
+  $("#modals").load("/pages/load-modals.html");
 
   $.getScript("/assets/scripts/jquery-3.3.1.min.js");
   $.getScript("/assets/scripts/menus.js");

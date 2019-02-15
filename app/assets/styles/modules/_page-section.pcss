@@ -53,4 +53,20 @@
   &__image {
     width: 100%;
   }
+
+  &__iframe-container {
+    position: relative;
+    margin: 0 auto;
+    
+
+    & iframe {
+      width: 100%;
+    }
+
+    @mixin atSmall {
+      position: relative;
+      top: auto;
+
+    }
+  }
 }

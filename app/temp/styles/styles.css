@@ -656,6 +656,23 @@ a {
     width: 100%;
   }
 
+.page-section__iframe-container {
+    position: relative;
+    margin: 0 auto;
+  }
+
+.page-section__iframe-container iframe {
+      width: 100%;
+    }
+
+@media (min-width: 540px) {
+
+.page-section__iframe-container {
+      position: relative;
+      top: auto
+  }
+  }
+
 .headline {
   font-weight: 300;
   font-size: 1.9rem;
