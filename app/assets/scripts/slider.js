@@ -5,7 +5,6 @@ $(function() {
   //configuration
 
   let width = window.innerWidth;
-  // let width = 1630
   let animationSpeed = 700;
   let pause = 4000;
   let currentSlide = 1;
@@ -69,11 +68,6 @@ $(function() {
     feedPrevious();
   };
   
-  //listen to mousenter and pause
-  //resume on mouseleave
-
-  // slider.on('mouseenter', stopSlider).on('mouseleave', startSlider);
-
   //on click for previous and next arrow buttons
   //slide left or right
 
@@ -82,4 +76,9 @@ $(function() {
   $next.click(goNext);
 
   startSlider();
+
+  // refresh slider width with window resize
+
+  window.onresize = function () {width = window.innerWidth};
+
 });

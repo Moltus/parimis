@@ -656,23 +656,6 @@ a {
     width: 100%;
   }
 
-.page-section__iframe-container {
-    position: relative;
-    margin: 0 auto;
-  }
-
-.page-section__iframe-container iframe {
-      width: 100%;
-    }
-
-@media (min-width: 540px) {
-
-.page-section__iframe-container {
-      position: relative;
-      top: auto
-  }
-  }
-
 .headline {
   font-weight: 300;
   font-size: 1.9rem;
@@ -926,7 +909,8 @@ a {
 .testimonial {
   background-color: #142436;
   padding: 0 18px 8px 18px;
-  margin-bottom: 98px;
+  max-width: 600px;
+  margin: 0 auto 98px auto;
 }
 
 @media (min-width: 1200px) {
@@ -1339,9 +1323,6 @@ a {
   height: 100%;
 }
 
-/* opacity: 1;
-  transition: opacity 2s ease-out;  */
-
 .slider__slides {
     display: flex;
     width: calc(100vw*7);
@@ -1360,11 +1341,6 @@ a {
     width: 100%;
     height: 100%;
   }
-
-/* &__slide img {
-    width: 100%;
-    height: 100%;
-  } */
 
 .slider__prev, .slider__next {
   cursor: pointer;
@@ -1401,17 +1377,34 @@ a {
 }
 
 .catchphrase__title { 
-    font-size: 3rem;
-      font-weight: 200;
+    font-size: 1.6rem;
+    font-weight: 200;
 
   }
 
-.catchphrase__subtitle {
-     font-size: 2rem;
-     margin-top: 0;
-     font-weight: 200;
+@media (min-width: 800px) {
 
-     /* margin-left: 100px; */
+.catchphrase__title {
+      font-size: 2.5rem
+
+  }
+  }
+
+.catchphrase__subtitle {
+    font-size: 1.6rem;
+    margin-top: 0;
+    font-weight: 200;
+
+     
+  }
+
+@media (min-width: 800px) {
+
+.catchphrase__subtitle {
+      font-size: 2rem
+
+     
+  }
   }
 
 .catchphrase__line-top {
@@ -1548,14 +1541,22 @@ a {
 
 .social-icons {
   text-align: center;
+
+  
 }
 
 .social-icons__icon {
     width: 60px;
     height: 60px;
     margin: 15px 5px;
+    box-shadow: 0 0 0 grey;
+    transition: box-shadow 200ms;
     
   }
+
+.social-icons__icon:hover {
+    box-shadow: 5px 5px 0 grey;
+    }
 
 @media (min-width: 540px) {
 
@@ -1597,4 +1598,26 @@ a {
 
 .form-container input[type=submit]:hover {
   background-color: #E5B67C;
+  }
+
+.access {
+  text-align: center;
+}
+
+.access__iframe-container {
+    position: relative;
+    margin: 0 auto;
+  }
+
+.access__iframe-container iframe {
+      width: 100%;
+      max-width: 800px;
+    }
+
+@media (min-width: 540px) {
+
+.access__iframe-container {
+      position: relative;
+      top: auto
+  }
   }
