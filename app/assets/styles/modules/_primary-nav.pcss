@@ -1,69 +1,69 @@
 .primary-nav {
-  
-  ul {
-    margin: 0;
-    padding: 0;
-  }
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 50px);
+  top: 50px;
+  left: 0;
+  transition: .5s;
+  background-color: rgba(255, 255, 255, var(--headerOpacity));
 
-  li {
-  list-style: none;
-  padding-right: 20px;
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: 400;
-    display: inline-block;
-  }
-
-  &--dkGold {
-    a {
-      color: $dkGold;
+    ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+      text-align: center;
     }
-    a:after {
-      padding-bottom: 3px;
-      border-bottom: 2px solid $dkGold;
+
+    ul li {
+      list-style: none;
     }
-  }
-  &--dkBlue {
-    a {
+
+    ul li a {
+      text-decoration: none;
+      font-weight: 400;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+      /* height: 50px;
+      line-height: 50px; */
+      padding: 15px 10px;
       color: $dkBlue;
+      display: inline-block;
     }
-    a:after {
-      padding-bottom: 3px;
+
+    ul li>ul {
+      display: none;
+    }
+
+    &__arrow-down {
+      display: inline-block;
+      margin-left: 5px;
+      padding-bottom: 2px;
+      width: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid $dkBlue;
+    }
+  
+  @mixin atMedium {
+    background-color: transparent;
+    position: static;
+    width: initial;
+    height: initial;
+    
+    ul {
+      display: flex;
+    }
+    
+    ul li a:after {
+      display: block;
+      content: '';
       border-bottom: 2px solid $dkBlue;
+      transform: scaleX(0);
+      transition: transform 250ms;
+    }
+
+    ul li a:hover:after {
+      transform: scaleX(1);
     }
   }
-
-  &__arrow-down {
-    display: inline-block;
-    margin-left: 5px;
-    padding-bottom: 2px;
-    width: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid $dkBlue;
-  }
-
-
-
-  a:after {
-    display: block;
-    content: '';
-    /* border-bottom: 2px solid $dkBlue; */
-    transform: scaleX(0);
-    transition: transform 250ms;
-  }
-
-  a:hover:after {
-    transform: scaleX(1);
-  }
-
-  
-
-
-
-  
-
 
 }
