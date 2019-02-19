@@ -8,6 +8,34 @@
   flex-direction: row;
   justify-content: space-between;
 
+  &__nav {
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    ul li a:after {
+      display: block;
+      content: '';
+      border-bottom: 2px solid $dkBlue;
+      transform: scaleX(0);
+      transition: transform 250ms;
+    }
+
+    ul li a{
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    ul li a:hover:after {
+      transform: scaleX(1);
+    }
+  }
+
   &__links {
     display: flex;
     margin-bottom: 2rem;
@@ -21,6 +49,7 @@
     display: block;
     margin-bottom: 1rem;
     font-weight: 200;
+    margin-right: 20px;
 
     @mixin atSmall {
       display: inline-block;
