@@ -1,13 +1,23 @@
 .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 3;
   width: 100%;
   background-color: rgba(255, 255, 255, var(--headerOpacity));
   transition: background-color 1s;
-  border-bottom: 1px solid $dkBlue;
+  border-bottom: 1px solid rgba(0,0,0,.2);
   box-sizing: border-box;
+
+  @mixin atMedium {
+    &:hover {
+    background-color: rgba(255, 255, 255, 1);
+    }
+  }
+
+  &.active {
+    background-color: rgba(255, 255, 255, 1);
+  }
 
   &__menu-container {
     /* padding: 0 18px; */
@@ -15,7 +25,6 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
- 
   }
 
   &__logo {   
@@ -40,8 +49,8 @@
     padding: 7px 0;
 
     & div {
-      width: 36px;
-      height: 4px;
+      width: 30px;
+      height: 3px;
       background-color: black;
       margin: 6px 0;
     }

@@ -1,11 +1,15 @@
 .primary-nav {
   position: absolute;
   width: 100%;
-  height: calc(100vh - 50px);
+  height: auto;
   top: 50px;
-  left: 0;
+  left: -100%;
   transition: .5s;
-  background-color: rgba(255, 255, 255, var(--headerOpacity));
+  background-color: rgb(255, 255, 255);
+
+  &.active {
+    left: 0;
+  }
 
     ul {
       display: block;
@@ -16,6 +20,12 @@
 
     ul li {
       list-style: none;
+      position: relative;
+    }
+
+    ul li.primary-nav__submenu:before {
+      content: '';
+      position: absolute;
     }
 
     ul li a {
@@ -26,11 +36,32 @@
       line-height: 50px; */
       padding: 15px 10px;
       color: $dkBlue;
-      display: inline-block;
+      display: block;
     }
 
-    ul li>ul {
+    ul li.active {
+      background-color: $ltBlue;
+    }
+
+    ul li ul {
+      position: absolute;
+      /* background-color: rgba(200, 200, 200, var(--headerOpacity)); */
+      left: 0;
       display: none;
+    }
+
+    ul li.active ul {
+      position: relative;
+      background-color: $teal;
+      display: block;
+    }
+    ul li.active ul li a {
+      color: #fff;
+    }
+
+    ul li ul li {
+      display: block;
+      /* width: 200px; */
     }
 
     &__arrow-down {
@@ -48,9 +79,26 @@
     position: static;
     width: initial;
     height: initial;
+
     
     ul {
       display: flex;
+    }
+
+    ul li.active {
+      background-color: initial;
+    }
+
+    ul li.active ul {
+      position: absolute;
+      background-color: transparent;
+    }
+
+    ul li.active ul li a{
+      color: $dkBlue;
+    }
+    ul li a {
+      border: none;
     }
     
     ul li a:after {
@@ -60,6 +108,16 @@
       transform: scaleX(0);
       transition: transform 250ms;
     }
+
+    ul li ul li a{
+      background-color: #fff;
+      border: 1px solid rgba(0,0,0,.2);
+      border-top: none;
+    }
+
+    /* ul li ul li a:hover {
+      background-color: rgba(255, 255, 255, var(--headerOpacity));
+    } */
 
     ul li a:hover:after {
       transform: scaleX(1);
