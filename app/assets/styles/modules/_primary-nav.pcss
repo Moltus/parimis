@@ -3,12 +3,15 @@
   width: 100%;
   height: auto;
   top: 50px;
-  left: -100%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
   transition: .5s;
   background-color: rgb(255, 255, 255);
 
   &.active {
-    left: 0;
+    visibility: visible;
+    opacity: 1;
   }
 
     ul {
@@ -76,6 +79,8 @@
   
   @mixin atMedium {
     background-color: transparent;
+    visibility: initial;
+    opacity: initial;
     position: static;
     width: initial;
     height: initial;
