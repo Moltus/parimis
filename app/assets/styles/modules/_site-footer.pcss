@@ -17,19 +17,22 @@
       display: flex;
       flex-wrap: wrap;
     }
-
+ 
+    ul li a{
+      display: block;
+      text-decoration: none;
+      padding: 10px;
+    }
+    
     ul li a:after {
       display: block;
       content: '';
-      border-bottom: 2px solid $dkBlue;
+      padding-bottom: 3px;
+      border-bottom: 2px solid $dkGold;
       transform: scaleX(0);
       transition: transform 250ms;
     }
 
-    ul li a{
-      text-decoration: none;
-      padding: 10px;
-    }
 
     ul li a:hover:after {
       transform: scaleX(1);

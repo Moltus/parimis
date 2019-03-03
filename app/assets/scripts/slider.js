@@ -79,6 +79,5 @@ $(function() {
 
   // refresh slider width with window resize
 
-  window.onresize = function () {width = window.innerWidth};
 
 });

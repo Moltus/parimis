@@ -511,13 +511,13 @@ a {
   text-decoration: none;
   padding: .65rem 1.1rem;
   display: inline-block;
+  transition: all 500ms;
   
 }
 
 .btn--gold {
     background-color: #AF804E;
     border: 2px solid #AF804E;
-    transition: all 500ms;
   }
 
 .btn--gold:hover {
@@ -976,20 +976,22 @@ a {
       flex-wrap: wrap;
     }
 
+.site-footer__nav ul li a{
+      display: block;
+      text-decoration: none;
+      padding: 10px;
+    }
+
 .site-footer__nav ul li a:after {
       display: block;
       content: '';
-      border-bottom: 2px solid #142436;
+      padding-bottom: 3px;
+      border-bottom: 2px solid #AF804E;
       -webkit-transform: scaleX(0);
               transform: scaleX(0);
       transition: -webkit-transform 250ms;
       transition: transform 250ms;
       transition: transform 250ms, -webkit-transform 250ms;
-    }
-
-.site-footer__nav ul li a{
-      text-decoration: none;
-      padding: 10px;
     }
 
 .site-footer__nav ul li a:hover:after {
@@ -1060,22 +1062,25 @@ a {
     align-items: center;
   }
 
-@media (min-width: 800px) {
-
-.site-header__logo {
-      padding-right: 30px
-  }
-  }
-
 .site-header__logo svg {
       height: 45px;
-      fill: #142436;
+      fill: #AF804E;
       transition: fill .5s;
     }
 
 .site-header__logo svg:hover {
-        fill: #AF804E;             
+        fill: #142436; 
+        /* height: 60px;             */
       }
+
+@media (min-width: 800px) {
+
+.site-header__logo {
+      padding-right: 30px
+
+    
+  }
+  }
 
 .site-header__menu-toggle {
     cursor: pointer; 
@@ -1119,10 +1124,6 @@ a {
   background-color: rgb(255, 255, 255);
 
 }
-
-.primary-nav--gold a {
-      color: #E5B67C;
-    }
 
 .primary-nav.active {
     visibility: visible;
@@ -1180,7 +1181,6 @@ a {
 
 .primary-nav ul li ul li {
       display: block;
-      /* width: 200px; */
     }
 
 .primary-nav__arrow-down {
@@ -1203,13 +1203,18 @@ a {
     width: initial;
     height: initial
 
+
+
     /* ul li ul li a:hover {
       background-color: rgba(255, 255, 255, var(--headerOpacity));
     } */
 
 }
 
-    
+    .primary-nav__submenu:hover ul {
+      display: block;
+    }
+
     .primary-nav ul {
       display: flex;
     }
@@ -1240,16 +1245,16 @@ a {
       transition: transform 250ms;
       transition: transform 250ms, -webkit-transform 250ms;
     }
+    .primary-nav ul li a:hover:after {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+
 
     .primary-nav ul li ul li a{
       background-color: #fff;
       border: 1px solid rgba(0,0,0,.2);
       border-top: none;
-    }
-
-    .primary-nav ul li a:hover:after {
-      -webkit-transform: scaleX(1);
-              transform: scaleX(1);
     }
   }
 

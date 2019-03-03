@@ -29,19 +29,22 @@
 
   &__logo {   
 
+    svg {
+      height: 45px;
+      fill: $dkGold;
+      transition: fill .5s;
+
+      &:hover {
+        fill: $dkBlue; 
+        /* height: 60px;             */
+      }
+    }
+
     @mixin atMedium {
       padding-right: 30px; 
     }
 
-    svg {
-      height: 45px;
-      fill: $dkBlue;
-      transition: fill .5s;
-
-      &:hover {
-        fill: $dkGold;             
-      }
-    }
+    
   }
 
   &__menu-toggle {
