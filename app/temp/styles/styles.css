@@ -1564,3 +1564,118 @@ a {
       top: auto
   }
   }
+
+.blur-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-animation: fade-in 1s ease-in forwards;
+          animation: fade-in 1s ease-in forwards;
+}
+
+@-webkit-keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity:1;}
+  }
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity:1;}
+  }
+
+.writing__restaurant {
+  position: absolute;
+  top: 10vw;
+  left: 10vw;
+  width: 30vw;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+.path__restaurant {
+  stroke: #AF804E;
+  stroke-width: 3px;
+  fill: transparent;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  box-shadow: 5px 5px 5px black;
+}
+
+#R1 {
+  -webkit-animation: dash 2s 1s linear forwards;
+          animation: dash 2s 1s linear forwards;
+}
+
+#R2 {
+  -webkit-animation: dash 2.5s 1.25s linear forwards;
+          animation: dash 2.5s 1.25s linear forwards;
+}
+
+#R3 {
+  -webkit-animation: dash 2.5s 1.8s linear forwards;
+          animation: dash 2.5s 1.8s linear forwards;
+}
+
+#R4 {
+  -webkit-animation: dash 2.5s 2.2s linear forwards;
+          animation: dash 2.5s 2.2s linear forwards;
+}
+
+#R5 {
+  -webkit-animation: dash 2.5s 2.6s linear forwards;
+          animation: dash 2.5s 2.6s linear forwards;
+}
+
+#R6 {
+  -webkit-animation: dash 2.6s 2.75s linear forwards;
+          animation: dash 2.6s 2.75s linear forwards;
+}
+
+#R7 {
+  -webkit-animation: dash 2.5s 2.95s linear forwards;
+          animation: dash 2.5s 2.95s linear forwards;
+}
+
+#R8 {
+  -webkit-animation: dash 2.5s 3.65s linear forwards;
+          animation: dash 2.5s 3.65s linear forwards;
+}
+
+#R9 {
+  -webkit-animation: dash 2.5s 3.8s linear forwards;
+          animation: dash 2.5s 3.8s linear forwards;
+}
+
+#R10 {
+  -webkit-animation: dash 2.5s 4.15s linear forwards;
+          animation: dash 2.5s 4.15s linear forwards;
+}
+
+#R11 {
+  -webkit-animation: dash 2.5s 5s linear forwards;
+          animation: dash 2.5s 5s linear forwards;
+}
+
+#R12 {
+  -webkit-animation: dash 1s 5.3s linear forwards;
+          animation: dash 1s 5.3s linear forwards;
+}
+
+@-webkit-keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
