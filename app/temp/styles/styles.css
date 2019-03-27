@@ -631,21 +631,18 @@ a {
   }
 
 .page-section--sm-height {
-    height: 40vh;
-    display: flex;
-    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
 .page-section--md-height {
-    height: 60vh;
-    display: flex;
-    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
 .page-section--lg-height {
-    height: 80vh;
-    display: flex;
-    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
 .page-section--teal {
@@ -979,9 +976,9 @@ a {
 .site-footer {
   background-color: #142436;
   color: #fff;
-  padding: 1.5rem 0;
+  padding: 3.5rem 0;
   text-align: center;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
