@@ -3,7 +3,7 @@ $(document).ready(function () {
     let scroll = $(this).scrollTop();
     let opacity = .5 + (scroll / 1000);
     if (opacity >= 0) {
-      // $('#site-header').css('background-color', 'rgba(255, 255, 255,' + opacity + ')')
+      
       $("body").get(0).style.setProperty("--headerOpacity", opacity);
     }
   });

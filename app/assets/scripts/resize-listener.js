@@ -20,7 +20,6 @@ var windowWidth = window.innerWidth;
   function actualResizeHandler() {
     // handle the resize event
     windowWidth = window.innerWidth;
-    console.log(windowWidth);
     $.getScript("/assets/scripts/slider.js");
   }
   

@@ -630,6 +630,24 @@ a {
   }
   }
 
+.page-section--sm-height {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+  }
+
+.page-section--md-height {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+  }
+
+.page-section--lg-height {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+  }
+
 .page-section--teal {
     background-color: #69A19C;
     color: #000;
@@ -949,11 +967,12 @@ a {
     color: #E5B67C;
     text-align: center;
     font-weight: 400;
-    font-size: 0.9375rem;
-    margin: .25rem 0 1rem 0; 
+    font-size: 1.25rem;
+    margin: .25rem 0 1.5rem 0; 
   }
 
-.testimonial--whitetext {
+.testimonial__paragraph {
+
     color: #ddd;
   }
 
@@ -966,6 +985,9 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 20vh;
+  display: flex;
+  align-items: center;
 }
 
 .site-footer__nav ul {
@@ -1328,6 +1350,14 @@ a {
 @media (min-width: 800px) {
 
 .catchphrase__title {
+      font-size: 2rem
+
+  }
+  }
+
+@media (min-width: 1200px) {
+
+.catchphrase__title {
       font-size: 2.5rem
 
   }
@@ -1351,12 +1381,12 @@ a {
   }
 
 .catchphrase__line-top {
-    width: 80%;
+    width: 50vw;
   }
 
 .catchphrase__line-bottom {
     margin-top: 1em;
-    width: 60%;
+    width: 35vw;
   }
 
 .pictures-page__picture {
@@ -1553,8 +1583,8 @@ a {
   }
 
 .access__iframe-container iframe {
-      width: 100%;
-      max-width: 800px;
+      width: 100vw;
+      margin-bottom: 20px;
     }
 
 @media (min-width: 540px) {
