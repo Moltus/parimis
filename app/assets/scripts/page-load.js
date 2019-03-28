@@ -8,7 +8,7 @@
   // $.getScript("/assets/scripts/menus.js");
   $.getScript("/assets/scripts/menu.js");
   $.getScript("/assets/scripts/header-opacity.js");
-  $.getScript("/assets/scripts/slider.js");
+  $.getScript("/assets/scripts/slideshow.js");
   $.getScript("/assets/scripts/modal.js");
   $.getScript("/assets/scripts/print.js");
   
