@@ -22,17 +22,23 @@
 
   /* Hide the images by default */
   &__slide {
-    display: none;
-    transition: opacity 1s;
+    
+    position: absolute;
+    /* transition: opacity 1s; */
 
     /* Fading animation */
     &--fade {
-      animation: fade 1.5s;
-    }
+      /* animation: fade-in 1.5s; */
 
-    @keyframes fade {
-      from {opacity: .4}
-      to {opacity: 1}
+      @keyframes fade-in {
+        from {opacity: 0}
+        to {opacity: 1}
+      }
+
+      @keyframes fade-out {
+        from {opacity: 1}
+        to {opacity: 0}
+      }
     }
 
     &--outline {
