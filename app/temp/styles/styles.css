@@ -1286,7 +1286,7 @@ a {
 
 .slideshow {
   background-color: #142436;
-  padding: 100px 0;
+  padding: 150px 0 100px 0;
 
   
 
@@ -1317,6 +1317,7 @@ a {
 
 .slideshow__slide {
     display: none;
+    transition: opacity 1s;
   }
 
 /* Fading animation */
@@ -1336,6 +1337,11 @@ a {
       to {opacity: 1}
     }
 
+.slideshow__slide--outline {
+      outline: 1px solid #AF804E;
+      outline-offset: 7px;
+    }
+
 /* Next and previous buttons */
 
 .slideshow__prev, .slideshow__next {
@@ -1344,7 +1350,7 @@ a {
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 16px;
+    padding: 12px;
     color: #E5B67C;
     font-weight: bold;
     font-size: 18px;
@@ -1353,32 +1359,49 @@ a {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
+
   }
 
 .slideshow__prev {
     left: 0;
     border-radius: 0 5px 5px 0;
+
+    
   }
+
+.slideshow__prev--border {
+      background-color: #142436;
+    }
 
 @media (min-width: 540px) {
 
-.slideshow__prev {
+.slideshow__prev--border {
+      left: -42px;
       border-radius: 5px 0 0 5px;
-      left: -42px
-  }
+      border: 1px solid;
+      border-color: #AF804E #142436 #AF804E #AF804E
+    }
   }
 
 .slideshow__next {
     right: 0;
     border-radius: 5px 0 0 5px;
+
+    
   }
+
+.slideshow__next--border {
+      background-color: #142436;
+    }
 
 @media (min-width: 540px) {
 
-.slideshow__next {
+.slideshow__next--border {
+      right: -42px;
       border-radius: 0 5px 5px 0;
-      right: -42px
-  }
+      border: 1px solid;
+      border-color: #AF804E #AF804E #AF804E #142436
+    }
   }
 
 /* On hover, add a black background color with a little bit see-through */
@@ -1400,14 +1423,15 @@ a {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #AF804E;
+    /* background-color: $dkGold; */
+    border: 1px solid #AF804E;
     border-radius: 50%;
     display: inline-block;
     transition: background-color .6s ease;
   }
 
 .slideshow__dot.active, .slideshow__dot:hover {
-      background-color: #E5B67C;
+      background-color: #AF804E;
     }
 
 .catchphrase {
@@ -1456,12 +1480,26 @@ a {
   }
 
 .catchphrase__line-top {
-    width: 50vw;
+    width: 60vw;
+  }
+
+@media (min-width: 800px) {
+
+.catchphrase__line-top {
+      width: 40vw
+  }
   }
 
 .catchphrase__line-bottom {
     margin-top: 1em;
-    width: 35vw;
+    width: 45vw;
+  }
+
+@media (min-width: 800px) {
+
+.catchphrase__line-bottom {
+      width: 32vw
+  }
   }
 
 .pictures-page {

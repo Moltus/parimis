@@ -1,6 +1,6 @@
 .slideshow {
   background-color: $dkBlue;
-  padding: 100px 0;
+  padding: 150px 0 100px 0;
 
   &--border-bot {
     border-bottom: 10px solid $dkGold;
@@ -23,6 +23,7 @@
   /* Hide the images by default */
   &__slide {
     display: none;
+    transition: opacity 1s;
 
     /* Fading animation */
     &--fade {
@@ -33,6 +34,11 @@
       from {opacity: .4}
       to {opacity: 1}
     }
+
+    &--outline {
+      outline: 1px solid $dkGold;
+      outline-offset: 7px;
+    }
   }
 
   /* Next and previous buttons */
@@ -42,32 +48,49 @@
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 16px;
+    padding: 12px;
     color: $ltGold;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     user-select: none;
+
   }
 
   &__prev {
     left: 0;
     border-radius: 0 5px 5px 0;
 
-    @mixin atSmall {
-      border-radius: 5px 0 0 5px;
+    &--border {
+      background-color: $dkBlue;
+    
+      @mixin atSmall {
       left: -42px;
+      border-radius: 5px 0 0 5px;
+      border: 1px solid;
+      border-color: $dkGold $dkBlue $dkGold $dkGold;
+      }
     }
+
+    
   }
   
   &__next {
     right: 0;
     border-radius: 5px 0 0 5px;
 
-    @mixin atSmall {
-      border-radius: 0 5px 5px 0;
+    &--border {
+      background-color: $dkBlue;
+
+      @mixin atSmall {
       right: -42px;
+      border-radius: 0 5px 5px 0;
+      border: 1px solid;
+      border-color: $dkGold $dkGold $dkGold $dkBlue;
+      }
     }
+
+    
   }
 
   /* On hover, add a black background color with a little bit see-through */
@@ -87,13 +110,14 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: $dkGold;
+    /* background-color: $dkGold; */
+    border: 1px solid $dkGold;
     border-radius: 50%;
     display: inline-block;
     transition: background-color .6s ease;
 
     &.active, &:hover {
-      background-color: $ltGold;
+      background-color: $dkGold;
     }
   }
 
