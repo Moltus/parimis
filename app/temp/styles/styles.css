@@ -481,14 +481,14 @@ a {
 @media (min-width: 540px) {
 
 .large-hero__description {
-      font-size: 1.4rem
+      font-size: 1.3rem
   }
   }
 
 @media (min-width: 800px) {
 
 .large-hero__description {
-      font-size: 1.875rem
+      font-size: 1.5rem
   }
   }
 
@@ -631,21 +631,18 @@ a {
   }
 
 .page-section--sm-height {
-    height: 40vh;
-    display: flex;
-    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
 
 .page-section--md-height {
-    height: 60vh;
-    display: flex;
-    align-items: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
 .page-section--lg-height {
-    height: 80vh;
-    display: flex;
-    align-items: center;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 
 .page-section--teal {
@@ -699,14 +696,14 @@ a {
 @media (min-width: 540px) {
 
 .headline__title {
-      font-size: 4rem
+      font-size: 3rem
   }
   }
 
 @media (min-width: 800px) {
 
 .headline__title {
-      font-size: 5rem
+      font-size: 3.5rem
   }
   }
 
@@ -737,7 +734,14 @@ a {
 @media (min-width: 540px) {
 
 .headline--small {
-      font-size: 1.875rem
+      font-size: 1.5rem
+  }
+  }
+
+@media (min-width: 800px) {
+
+.headline--small {
+      font-size: 1.8rem
   }
   }
 
@@ -979,9 +983,9 @@ a {
 .site-footer {
   background-color: #142436;
   color: #fff;
-  padding: 1.5rem 0;
+  padding: 3.5rem 0;
   text-align: center;
-  padding-bottom: 40px;
+  /* padding-bottom: 40px; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1280,60 +1284,154 @@ a {
     }
   }
 
-.slider {
-  position: relative;
-  overflow: hidden;
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
+.slideshow {
+  background-color: #142436;
+  padding: 150px 0 100px 0;
+
+  
+
 }
 
-.slider__slides {
-    display: flex;
-    width: calc(100vw*7);
-    height: 100%;
-    margin: 0;
+.slideshow--border-bot {
+    border-bottom: 10px solid #AF804E;
+  }
+
+.slideshow--border-top {
+    border-top: 10px solid #AF804E;
+  }
+
+.slideshow__container {
+    position: relative;
+    margin: auto;
     padding: 0;
   }
 
-.slider__slides--pics5 {
-      width: calc(100vw*5);
-      height: 100%;
+@media (min-width: 540px) {
+
+.slideshow__container {
+      max-width: 75vw
+  }
+  }
+
+/* Hide the images by default */
+
+.slideshow__slide {
+    display: none;
+  }
+
+/* Fading animation */
+
+.slideshow__slide--fade {
+      -webkit-animation: fade 1.5s;
+              animation: fade 1.5s;
     }
 
-.slider__slide {
-    list-style-type: none;
-    width: 100%;
-    height: 100%;
+@-webkit-keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+@keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+.slideshow__slide--outline {
+      outline: 1px solid #AF804E;
+      outline-offset: 7px;
+    }
+
+/* Next and previous buttons */
+
+.slideshow__prev, .slideshow__next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 12px;
+    color: #E5B67C;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
   }
 
-.slider__prev, .slider__next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 38px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  z-index: 2;
+.slideshow__prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+
+    
   }
 
-.slider__next {
+.slideshow__prev--border {
+      background-color: #142436;
+    }
+
+@media (min-width: 540px) {
+
+.slideshow__prev--border {
+      left: -42px;
+      border-radius: 5px 0 0 5px;
+      border: 1px solid;
+      border-color: #AF804E #142436 #AF804E #AF804E
+    }
+  }
+
+.slideshow__next {
     right: 0;
-    border-radius: 3px 0 0 3px;
+    border-radius: 5px 0 0 5px;
+
+    
   }
 
-.slider__prev:hover, .slider__next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+.slideshow__next--border {
+      background-color: #142436;
+    }
+
+@media (min-width: 540px) {
+
+.slideshow__next--border {
+      right: -42px;
+      border-radius: 0 5px 5px 0;
+      border: 1px solid;
+      border-color: #AF804E #AF804E #AF804E #142436
+    }
+  }
+
+/* On hover, add a black background color with a little bit see-through */
+
+.slideshow__prev:hover, .slideshow__next:hover {
+    background-color: rgba(0,0,0,.8);
+    color: #E5B67C;
+  }
+
+/* The dots indicators */
+
+.slideshow__dots {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+.slideshow__dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    /* background-color: $dkGold; */
+    border: 1px solid #AF804E;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+  }
+
+.slideshow__dot.active, .slideshow__dot:hover {
+      background-color: #AF804E;
+    }
 
 .catchphrase {
   font-family: 'parisienneregular', 'Segoe UI', sans-serif;
@@ -1350,7 +1448,7 @@ a {
 @media (min-width: 800px) {
 
 .catchphrase__title {
-      font-size: 2rem
+      font-size: 1.8rem
 
   }
   }
@@ -1358,7 +1456,7 @@ a {
 @media (min-width: 1200px) {
 
 .catchphrase__title {
-      font-size: 2.5rem
+      font-size: 2rem
 
   }
   }
@@ -1381,17 +1479,36 @@ a {
   }
 
 .catchphrase__line-top {
-    width: 50vw;
+    width: 60vw;
+  }
+
+@media (min-width: 800px) {
+
+.catchphrase__line-top {
+      width: 40vw
+  }
   }
 
 .catchphrase__line-bottom {
     margin-top: 1em;
-    width: 35vw;
+    width: 45vw;
   }
+
+@media (min-width: 800px) {
+
+.catchphrase__line-bottom {
+      width: 32vw
+  }
+  }
+
+.pictures-page {
+  padding-top: 4rem;
+}
 
 .pictures-page__picture {
     width: 60vw;
-    height: auto;
+    /* height: auto; */
+    
   }
 
 .modal {
@@ -1580,11 +1697,12 @@ a {
 .access__iframe-container {
     position: relative;
     margin: 0 auto;
+    border-top: 10px solid #AF804E;
+      border-bottom: 10px solid #AF804E;
   }
 
 .access__iframe-container iframe {
       width: 100vw;
-      margin-bottom: 20px;
     }
 
 @media (min-width: 540px) {
