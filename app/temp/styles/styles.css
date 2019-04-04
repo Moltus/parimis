@@ -1129,6 +1129,16 @@ a {
 
 .site-header__btn-container {
     display: none;
+<<<<<<< HEAD
+  }
+
+@media (min-width: 800px) {
+
+.site-header__btn-container {
+      display: block
+  }
+  }
+=======
   }
 
 @media (min-width: 800px) {
@@ -1218,9 +1228,182 @@ a {
       border-right: 6px solid transparent;
       border-top: 6px solid #142436;
     }
+>>>>>>> 379113945b55d1a17dfbae5eef7c556d857dec38
 
-@media (min-width: 800px) {
+.primary-nav {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50px;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: .5s;
+  background-color: rgb(255, 255, 255);
 
+<<<<<<< HEAD
+}
+
+.primary-nav.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+.primary-nav ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+.primary-nav ul li {
+      list-style: none;
+      position: relative;
+    }
+
+.primary-nav ul li.primary-nav__submenu:before {
+      content: '';
+      position: absolute;
+    }
+
+.primary-nav ul li a {
+      text-decoration: none;
+      font-weight: 400;
+      border-bottom: 1px solid rgba(0,0,0,.2);
+      /* height: 50px;
+      line-height: 50px; */
+      padding: 15px 10px;
+      color: #142436;
+      display: block;
+    }
+
+.primary-nav ul li.active {
+      background-color: #B5D9D6;
+    }
+
+.primary-nav ul li ul {
+      position: absolute;
+      /* background-color: rgba(200, 200, 200, var(--headerOpacity)); */
+      left: 0;
+      display: none;
+    }
+
+.primary-nav ul li.active ul {
+      position: relative;
+      background-color: #69A19C;
+      display: block;
+    }
+
+.primary-nav ul li.active ul li a {
+      color: #fff;
+    }
+
+.primary-nav ul li ul li {
+      display: block;
+    }
+
+.primary-nav__arrow-down {
+      display: inline-block;
+      margin-left: 5px;
+      padding-bottom: 2px;
+      width: 0;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid #142436;
+    }
+=======
+.primary-nav {
+    background-color: transparent;
+    visibility: initial;
+    opacity: initial;
+    position: static;
+    width: initial;
+    height: initial
+
+
+
+    /* ul li ul li a:hover {
+      background-color: rgba(255, 255, 255, var(--headerOpacity));
+    } */
+
+}
+
+    .primary-nav__submenu:hover ul {
+      display: block;
+    }
+
+    .primary-nav ul {
+      display: flex;
+    }
+
+    .primary-nav ul li.active {
+      background-color: initial;
+    }
+
+    .primary-nav ul li.active ul {
+      position: absolute;
+      background-color: transparent;
+    }
+
+    .primary-nav ul li.active ul li a{
+      color: #142436;
+    }
+    .primary-nav ul li a {
+      border: none;
+    }
+    
+    .primary-nav ul li a:after {
+      display: block;
+      content: '';
+      border-bottom: 2px solid #142436;
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      transition: -webkit-transform 250ms;
+      transition: transform 250ms;
+      transition: transform 250ms, -webkit-transform 250ms;
+    }
+    .primary-nav ul li a:hover:after {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1);
+    }
+
+
+    .primary-nav ul li ul li a{
+      background-color: #fff;
+      border: 1px solid rgba(0,0,0,.2);
+      border-top: none;
+    }
+  }
+
+.slideshow {
+  background-color: #142436;
+  padding: 150px 0 100px 0;
+
+  
+
+}
+
+.slideshow--border-bot {
+    border-bottom: 10px solid #AF804E;
+  }
+
+.slideshow--border-top {
+    border-top: 10px solid #AF804E;
+  }
+
+.slideshow__container {
+    position: relative;
+    margin: auto;
+
+    /* @mixin atLarge {
+      max-width: 1530px;
+    } */
+  }
+>>>>>>> 379113945b55d1a17dfbae5eef7c556d857dec38
+
+@media (min-width: 540px) {
+
+<<<<<<< HEAD
 .primary-nav {
     background-color: transparent;
     visibility: initial;
@@ -1334,8 +1517,93 @@ a {
 @keyframes fade {
       from {opacity: .4}
       to {opacity: 1}
+=======
+.slideshow__container {
+      max-width: 75vw
+  }
+  }
+
+.slideshow__list {
+    padding: 0;
+  }
+
+.slideshow__list--outline {
+      outline: 1px solid #AF804E;
+      outline-offset: 7px;
     }
 
+/* Hide the images by default */
+
+.slideshow__slide {
+    display: none;
+
+    
+  }
+
+/* Fading animation */
+
+.slideshow__slide--fade {
+      -webkit-animation: fade 6s;
+              animation: fade 6s;
+    }
+
+@-webkit-keyframes fade {
+      0% {opacity: 0;}
+      10% {opacity: 1;}
+      95% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+
+@keyframes fade {
+      0% {opacity: 0;}
+      10% {opacity: 1;}
+      95% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+
+/* Next and previous buttons */
+
+.slideshow__prev, .slideshow__next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 12px;
+    color: #E5B67C;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+  }
+
+.slideshow__prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+
+    
+  }
+
+.slideshow__prev--border {
+      background-color: #142436;
+    }
+
+@media (min-width: 540px) {
+
+.slideshow__prev--border {
+      left: -42px;
+      border-radius: 5px 0 0 5px;
+      border: 1px solid;
+      border-color: #AF804E #142436 #AF804E #AF804E
+>>>>>>> 379113945b55d1a17dfbae5eef7c556d857dec38
+    }
+  }
+
+<<<<<<< HEAD
 .slideshow__slide--outline {
       outline: 1px solid #AF804E;
       outline-offset: 7px;
@@ -1429,6 +1697,55 @@ a {
     transition: background-color .6s ease;
   }
 
+=======
+.slideshow__next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+
+    
+  }
+
+.slideshow__next--border {
+      background-color: #142436;
+    }
+
+@media (min-width: 540px) {
+
+.slideshow__next--border {
+      right: -42px;
+      border-radius: 0 5px 5px 0;
+      border: 1px solid;
+      border-color: #AF804E #AF804E #AF804E #142436
+    }
+  }
+
+/* On hover, add a black background color with a little bit see-through */
+
+.slideshow__prev:hover, .slideshow__next:hover {
+    background-color: rgba(0,0,0,.8);
+    color: #E5B67C;
+  }
+
+/* The dots indicators */
+
+.slideshow__dots {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+.slideshow__dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    /* background-color: $dkGold; */
+    border: 1px solid #AF804E;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color .6s ease;
+  }
+
+>>>>>>> 379113945b55d1a17dfbae5eef7c556d857dec38
 .slideshow__dot.active, .slideshow__dot:hover {
       background-color: #AF804E;
     }
