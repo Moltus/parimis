@@ -25,7 +25,6 @@ class Modal {
   }
 
   openModal() {
-    console.log("open modal youhou!")
     this.modal.addClass(this.visibilityClass);
     return false;
   }
