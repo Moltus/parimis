@@ -50,6 +50,7 @@
 
     ul li ul {
       position: absolute;
+      /* width: 150px; */
       /* background-color: rgba(200, 200, 200, var(--headerOpacity)); */
       left: 0;
       display: none;
@@ -121,10 +122,20 @@
       transform: scaleX(1);
     }
 
+    ul li ul {
+      width: 150px;
+      left: -15px; 
+    }
+
+    ul li ul li {
+      background-color: #fff;
+      border-left: 1px solid rgba(0,0,0,.2);
+      border-right: 1px solid rgba(0,0,0,.2);
+      border-bottom: 1px solid rgba(0,0,0,.2);
+    }
 
     ul li ul li a{
-      background-color: #fff;
-      border: 1px solid rgba(0,0,0,.2);
+      display: inline-block;
       border-top: none;
     }
 
