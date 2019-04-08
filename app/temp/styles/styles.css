@@ -1858,6 +1858,10 @@ a {
   }
   }
 
+#restaurant {
+  /* position: fixed; */
+}
+
 .blur-overlay {
   position: absolute;
   top: 0;
@@ -1879,80 +1883,60 @@ a {
 
 .writing__restaurant {
   position: absolute;
-  top: 10vw;
-  left: 10vw;
-  width: 30vw;
+  top: 12vw;
+  left: 15vw;
+  width: 25vw;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
 }
 
-.path__restaurant {
-  stroke: #AF804E;
-  stroke-width: 3px;
-  fill: transparent;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  box-shadow: 5px 5px 5px black;
+.writing__restaurant__path {
+    stroke: #AF804E;
+    stroke-width: 2.3px;
+    fill: transparent;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    box-shadow: 5px 5px 5px black;
+  }
+
+#d1 {
+  -webkit-animation: dash 3s 1s linear forwards;
+          animation: dash 3s 1s linear forwards;
 }
 
-#R1 {
-  -webkit-animation: dash 2s 1s linear forwards;
-          animation: dash 2s 1s linear forwards;
+#d2 {
+  -webkit-animation: dash 2.5s 1.55s linear forwards;
+          animation: dash 2.5s 1.55s linear forwards;
 }
 
-#R2 {
-  -webkit-animation: dash 2.5s 1.25s linear forwards;
-          animation: dash 2.5s 1.25s linear forwards;
+#d3 {
+  -webkit-animation: dash 2.5s 1.75s linear forwards;
+          animation: dash 2.5s 1.75s linear forwards;
 }
 
-#R3 {
-  -webkit-animation: dash 2.5s 1.8s linear forwards;
-          animation: dash 2.5s 1.8s linear forwards;
+#d4 {
+  -webkit-animation: dash 3.5s 1.9s linear forwards;
+          animation: dash 3.5s 1.9s linear forwards;
 }
 
-#R4 {
-  -webkit-animation: dash 2.5s 2.2s linear forwards;
-          animation: dash 2.5s 2.2s linear forwards;
+#d5 {
+  -webkit-animation: dash 2.5s 2.9s linear forwards;
+          animation: dash 2.5s 2.9s linear forwards;
 }
 
-#R5 {
-  -webkit-animation: dash 2.5s 2.6s linear forwards;
-          animation: dash 2.5s 2.6s linear forwards;
+#d6 {
+  -webkit-animation: dash 3.6s 3s linear forwards;
+          animation: dash 3.6s 3s linear forwards;
 }
 
-#R6 {
-  -webkit-animation: dash 2.6s 2.75s linear forwards;
-          animation: dash 2.6s 2.75s linear forwards;
+#d7 {
+  -webkit-animation: dash 2.5s 4s linear forwards;
+          animation: dash 2.5s 4s linear forwards;
 }
 
-#R7 {
-  -webkit-animation: dash 2.5s 2.95s linear forwards;
-          animation: dash 2.5s 2.95s linear forwards;
-}
-
-#R8 {
-  -webkit-animation: dash 2.5s 3.65s linear forwards;
-          animation: dash 2.5s 3.65s linear forwards;
-}
-
-#R9 {
-  -webkit-animation: dash 2.5s 3.8s linear forwards;
-          animation: dash 2.5s 3.8s linear forwards;
-}
-
-#R10 {
-  -webkit-animation: dash 2.5s 4.15s linear forwards;
-          animation: dash 2.5s 4.15s linear forwards;
-}
-
-#R11 {
-  -webkit-animation: dash 2.5s 5s linear forwards;
-          animation: dash 2.5s 5s linear forwards;
-}
-
-#R12 {
-  -webkit-animation: dash 1s 5.3s linear forwards;
-          animation: dash 1s 5.3s linear forwards;
+#d8 {
+  -webkit-animation: dash 2.5s 4.2s linear forwards;
+          animation: dash 2.5s 4.2s linear forwards;
 }
 
 @-webkit-keyframes dash {

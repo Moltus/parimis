@@ -1,3 +1,7 @@
+#restaurant {
+  /* position: fixed; */
+}
+
 .blur-overlay {
   position: absolute;
   top: 0;
@@ -13,57 +17,47 @@
 
 .writing__restaurant {
   position: absolute;
-  top: 10vw;
-  left: 10vw;
-  width: 30vw;
+  top: 12vw;
+  left: 15vw;
+  width: 25vw;
   transform: rotate(-15deg);
+
+  &__path {
+    stroke: $dkGold;
+    stroke-width: 2.3px;
+    fill: transparent;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    box-shadow: 5px 5px 5px black;
+  }
 }
 
-.path__restaurant {
-  stroke: $dkGold;
-  stroke-width: 3px;
-  fill: transparent;
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  box-shadow: 5px 5px 5px black;
+
+#d1 {
+  animation: dash 3s 1s linear forwards;
+}
+#d2 {
+  animation: dash 2.5s 1.55s linear forwards;
+}
+#d3 {
+  animation: dash 2.5s 1.75s linear forwards;
+}
+#d4 {
+  animation: dash 3.5s 1.9s linear forwards;
+}
+#d5 {
+  animation: dash 2.5s 2.9s linear forwards;
+}
+#d6 {
+  animation: dash 3.6s 3s linear forwards;
+}
+#d7 {
+  animation: dash 2.5s 4s linear forwards;
+}
+#d8 {
+  animation: dash 2.5s 4.2s linear forwards;
 }
 
-#R1 {
-  animation: dash 2s 1s linear forwards;
-}
-#R2 {
-  animation: dash 2.5s 1.25s linear forwards;
-}
-#R3 {
-  animation: dash 2.5s 1.8s linear forwards;
-}
-#R4 {
-  animation: dash 2.5s 2.2s linear forwards;
-}
-#R5 {
-  animation: dash 2.5s 2.6s linear forwards;
-}
-#R6 {
-  animation: dash 2.6s 2.75s linear forwards;
-}
-#R7 {
-  animation: dash 2.5s 2.95s linear forwards;
-}
-#R8 {
-  animation: dash 2.5s 3.65s linear forwards;
-}
-#R9 {
-  animation: dash 2.5s 3.8s linear forwards;
-}
-#R10 {
-  animation: dash 2.5s 4.15s linear forwards;
-}
-#R11 {
-  animation: dash 2.5s 5s linear forwards;
-}
-#R12 {
-  animation: dash 1s 5.3s linear forwards;
-}
 
 @keyframes dash {
   from {
