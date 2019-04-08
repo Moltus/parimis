@@ -1867,8 +1867,8 @@ a {
   top: 0;
   left: 0;
   opacity: 0;
-  -webkit-animation: fade-in 1s ease-in forwards;
-          animation: fade-in 1s ease-in forwards;
+  -webkit-animation: fade-in 2s ease-out forwards;
+          animation: fade-in 2s ease-out forwards;
 }
 
 @-webkit-keyframes fade-in {
@@ -1955,6 +1955,72 @@ a {
 #d8 {
   -webkit-animation: dash 2.5s 4.2s linear forwards;
           animation: dash 2.5s 4.2s linear forwards;
+}
+
+.writing__spa {
+  position: absolute;
+  top: 25vw;
+  left: 15vw;
+  width: 45vw;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+@media (min-width: 540px) {
+
+.writing__spa {
+    top: 15vw;
+    left: 15vw;
+    width: 35vw
+}
+  }
+
+@media (min-width: 800px) {
+
+.writing__spa {
+    top: 12vw;
+    left: 15vw;
+    width: 25vw
+}
+  }
+
+.writing__spa__path {
+    stroke: #AF804E;
+    stroke-width: 2.3px;
+    fill: transparent;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    box-shadow: 5px 5px 5px black;
+  }
+
+#r1 {
+  -webkit-animation: dash 4s 1s linear forwards;
+          animation: dash 4s 1s linear forwards;
+}
+
+#r2 {
+  -webkit-animation: dash 4.5s 2.1s linear forwards;
+          animation: dash 4.5s 2.1s linear forwards;
+}
+
+#r3 {
+  -webkit-animation: dash 2.5s 2.6s linear forwards;
+          animation: dash 2.5s 2.6s linear forwards;
+}
+
+#r4 {
+  -webkit-animation: dash 4.5s 2.8s linear forwards;
+          animation: dash 4.5s 2.8s linear forwards;
+}
+
+#r5 {
+  -webkit-animation: dash 2.5s 4s linear forwards;
+          animation: dash 2.5s 4s linear forwards;
+}
+
+#r6 {
+  -webkit-animation: dash 3.6s 4.2s linear forwards;
+          animation: dash 3.6s 4.2s linear forwards;
 }
 
 @-webkit-keyframes dash {

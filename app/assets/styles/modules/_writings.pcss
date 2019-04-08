@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   opacity: 0;
-  animation: fade-in 1s ease-in forwards;
+  animation: fade-in 2s ease-out forwards;
 
   @keyframes fade-in {
     from {opacity: 0;}
@@ -68,6 +68,55 @@
 #d8 {
   animation: dash 2.5s 4.2s linear forwards;
 }
+
+.writing__spa {
+  position: absolute;
+  top: 25vw;
+  left: 15vw;
+  width: 45vw;
+  transform: rotate(-15deg);
+
+  @mixin atSmall {
+    top: 15vw;
+    left: 15vw;
+    width: 35vw;
+  }
+  @mixin atMedium {
+    top: 12vw;
+    left: 15vw;
+    width: 25vw;
+  }
+
+  &__path {
+    stroke: $dkGold;
+    stroke-width: 2.3px;
+    fill: transparent;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    box-shadow: 5px 5px 5px black;
+  }
+}
+
+
+#r1 {
+  animation: dash 4s 1s linear forwards;
+}
+#r2 {
+  animation: dash 4.5s 2.1s linear forwards;
+}
+#r3 {
+  animation: dash 2.5s 2.6s linear forwards;
+}
+#r4 {
+  animation: dash 4.5s 2.8s linear forwards;
+}
+#r5 {
+  animation: dash 2.5s 4s linear forwards;
+}
+#r6 {
+  animation: dash 3.6s 4.2s linear forwards;
+}
+
 
 
 @keyframes dash {
