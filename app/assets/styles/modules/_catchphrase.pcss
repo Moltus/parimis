@@ -24,6 +24,10 @@
     font-weight: 200;
 
     @mixin atMedium {
+      font-size: 1.8rem;
+    }
+
+    @mixin atLarge {
       font-size: 2rem;
     }
 
@@ -31,19 +35,25 @@
   }
 
   &__line-top {
-    width: 60vw;
+    width: 25rem;
 
     @mixin atMedium {
-      width: 40vw;
+      width: 30rem;
+    }
+    @mixin atLarge {
+      width: 35rem;
     }
   }
 
   &__line-bottom {
     margin-top: 1em;
-    width: 45vw;
+    width: 23rem;
 
     @mixin atMedium {
-      width: 32vw;
+      width: 26rem;
+    }
+    @mixin atLarge {
+      width: 30rem;
     }
   }
 }
