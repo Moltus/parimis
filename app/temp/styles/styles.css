@@ -1249,12 +1249,12 @@ a {
     }
 
     .primary-nav ul li.active {
-      background-color: initial;
+      background-color: #fff;
     }
 
     .primary-nav ul li.active ul {
       position: absolute;
-      background-color: transparent;
+      background-color: #fff;
     }
 
     .primary-nav ul li.active ul li a{
