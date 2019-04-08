@@ -17,10 +17,21 @@
 
 .writing__restaurant {
   position: absolute;
-  top: 12vw;
+  top: 25vw;
   left: 15vw;
-  width: 25vw;
+  width: 45vw;
   transform: rotate(-15deg);
+
+  @mixin atSmall {
+    top: 15vw;
+    left: 15vw;
+    width: 35vw;
+  }
+  @mixin atMedium {
+    top: 12vw;
+    left: 15vw;
+    width: 25vw;
+  }
 
   &__path {
     stroke: $dkGold;

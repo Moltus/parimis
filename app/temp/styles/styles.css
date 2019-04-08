@@ -1883,12 +1883,30 @@ a {
 
 .writing__restaurant {
   position: absolute;
-  top: 12vw;
+  top: 25vw;
   left: 15vw;
-  width: 25vw;
+  width: 45vw;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
 }
+
+@media (min-width: 540px) {
+
+.writing__restaurant {
+    top: 15vw;
+    left: 15vw;
+    width: 35vw
+}
+  }
+
+@media (min-width: 800px) {
+
+.writing__restaurant {
+    top: 12vw;
+    left: 15vw;
+    width: 25vw
+}
+  }
 
 .writing__restaurant__path {
     stroke: #AF804E;
