@@ -1,3 +1,3 @@
-# Website for fictional luxury hotel named Parimis
+# Website for fictional luxury hotel "Parimis"
 
-HTML, CSS, Javascript, Jquery
+HTML5, PostCSS with Gulp, Javascript / Jquery
