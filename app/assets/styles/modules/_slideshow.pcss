@@ -1,5 +1,5 @@
 .slideshow {
-  background-color: $dkBlue;
+  background-color: $greyBlue;
   padding: 150px 0 100px 0;
 
   &--border-bot {
@@ -29,6 +29,19 @@
     padding: 0;
 
     &--outline {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -7px;
+        left: -7px;
+        width: 100%;
+        height: 100%;
+        padding: 7px;
+        /* border: 1px solid $dkGold; */
+        background-color: $dkBlue;
+      }
+      
       outline: 1px solid $dkGold;
       outline-offset: 7px;
     }
@@ -117,6 +130,7 @@
   }
 
   &__dot {
+    background-color: $dkBlue;
     cursor: pointer;
     height: 15px;
     width: 15px;

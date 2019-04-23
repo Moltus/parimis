@@ -5,19 +5,20 @@
   z-index: 3;
   width: 100%;
   /* background-color: rgba(255, 255, 255, var(--headerOpacity)); */
-  background-color: rgb(255, 255, 255);
+  background-color: $dkBlue;
+  color: #fff;
   transition: background-color .5s;
   border-bottom: 1px solid rgba(0,0,0,.2);
   box-sizing: border-box;
 
   @mixin atMedium {
     &:hover {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $dkBlue;
     }
   }
 
   &.active {
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $dkBlue;
   }
 
   &__menu-container {
@@ -31,13 +32,13 @@
   &__logo {   
 
     svg {
-      padding: 4px 0 2px 0;
+      padding: 7px 0 2px 0;
       height: 45px;
-      fill: $dkGold;
+      fill: $ltGold;
       transition: fill .5s;
 
       &:hover {
-        fill: $dkBlue; 
+        fill: #fff; 
         /* height: 60px;             */
       }
     }
@@ -53,10 +54,17 @@
     cursor: pointer; 
     padding: 7px 0;
 
+    &:hover {
+      & div {
+        background-color: #eee;
+      }
+    }
+    
+
     & div {
       width: 30px;
       height: 3px;
-      background-color: black;
+      background-color: $ltGold;
       margin: 6px 0;
     }
 

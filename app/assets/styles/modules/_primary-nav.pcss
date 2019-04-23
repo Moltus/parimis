@@ -7,7 +7,7 @@
   visibility: hidden;
   opacity: 0;
   transition: .5s;
-  background-color: rgb(255, 255, 255);
+  background-color: $dkBlue;
 
 
   &.active {
@@ -38,14 +38,14 @@
       border-bottom: 1px solid rgba(0,0,0,.2);
       /* height: 50px;
       line-height: 50px; */
-      padding: 15px 10px;
-      color: $dkBlue;
+      padding: 17px 10px 15px 10px;
+      color: $ltGold;
       display: block;
     }
     
 
     ul li.active {
-      background-color: $ltBlue;
+      /* background-color: $ltBlue; */
     }
 
     ul li ul {
@@ -54,15 +54,18 @@
       /* background-color: rgba(200, 200, 200, var(--headerOpacity)); */
       left: 0;
       display: none;
+      
     }
 
     ul li.active ul {
       position: relative;
-      background-color: $teal;
+      background-color: $greyBlue;
+      color: $dkGold;
       display: block;
+      
     }
     ul li.active ul li a {
-      color: #fff;
+      color: $ltGold;
     }
 
     ul li ul li {
@@ -76,7 +79,7 @@
       width: 0;
       border-left: 6px solid transparent;
       border-right: 6px solid transparent;
-      border-top: 6px solid $dkBlue;
+      border-top: 6px solid $ltGold;
     }
   
   @mixin atMedium {
@@ -96,16 +99,16 @@
     }
 
     ul li.active {
-      background-color: #fff;
+      background-color: $dkBlue;
     }
 
     ul li.active ul {
       position: absolute;
-      background-color: #fff;
+      /* background-color: #fff; */
     }
 
     ul li.active ul li a{
-      color: $dkBlue;
+      color: $ltGold;
     }
     ul li a {
       border: none;
@@ -114,7 +117,8 @@
     & ul li a:after {
       display: block;
       content: '';
-      border-bottom: 2px solid $dkBlue;
+      padding-top: 2px;
+      border-bottom: 2px solid $ltGold;
       transform: scaleX(0);
       transition: transform 250ms;
     }
@@ -128,10 +132,10 @@
     }
 
     ul li ul li {
-      background-color: #fff;
-      border-left: 1px solid rgba(0,0,0,.2);
-      border-right: 1px solid rgba(0,0,0,.2);
-      border-bottom: 1px solid rgba(0,0,0,.2);
+      background-color: $dkBlue;
+      border-left: 1px solid rgba(255,255,255,.2);
+      border-right: 1px solid rgba(255,255,255,.2);
+      border-bottom: 1px solid rgba(255,255,255,.2);
     }
 
     ul li ul li a{
